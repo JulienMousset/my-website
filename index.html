@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script src="./blotter.min.js"></script>
+    <script src="./liquidDistortMaterial.js"></script>
+    <title>Julien Mousset</title>
+  </head>
+  <body>
+    <div class="portfolio">
+      <header>
+        <nav>
+          <div class="logo"></div>
+        </nav>
+      </header>
+      <main>
+        <section class="page-1">
+          <h1 class="title">
+            <span class="title-1">Hi, I'm </span><span class="title-2"></span>
+          </h1>
+          <img class="profile-color" src="./ressources/img/profile-color.jpg" />
+          <img class="profile-bw" src="./ressources/img/profile-bw.jpg" />
+          <p class="intro">
+            I’m a <span class="job">software engineer/web developer</span> based
+            in Paris (France) with a strong interest in sound and design. I play
+            around with HTML, (S)CSS, Javascript, Python and C. I’m currently
+            learning Vue.js and back-end development while
+            <u>looking for an internship</u>.
+          </p>
+        </section>
+        <section class="page-2">
+          <h1>About</h1>
+          <p>
+            I graduated from Paris 1 Pantheon-Sorbonne University with a master
+            degree in <u>management of cultural projects and institutions</u>,
+            while working part-time as a cultural project manager. Then, in 2019
+            I decided to enter
+            <a class="link" target="_blank" href="https://www.42.fr/">42</a>
+            in order to gain knowledge about <u>computer science</u>.
+          </p>
+          <div class="distortion1"></div>
+          <div class="distortion2"></div>
+        </section>
+        <section class="page-3">
+          <h1>Me</h1>
+          <p>
+            Whenever I get a chance, I <u>record music</u> and try to catch up
+            with my <u>reading</u> list or <u>exercise</u> when I need to get
+            away from the screen. I’m also passionate about
+            <u>basketball</u> even though I’m bad at it. I’m better at
+            <u>games</u>, whether they are board games or video games.
+          </p>
+          <img class="img img1" src="./ressources/img/terror.jpeg" />
+          <img class="img img2" src="./ressources/img/drill.jpeg" />
+          <img class="img img3" src="./ressources/img/shop.jpeg" />
+        </section>
+        <section class="page-4">
+          <h1>Contact</h1>
+          <p>
+            I’m currently <u>available for freelance work</u> as well as
+            <u>looking for an internship</u>. Whether you want to hire me, have
+            a question or just want to say hi, you can contact me at
+            <span
+              ><a class="e-mail" href="mailto: contact.orlok@gmail.com"
+                >contact.orlok@gmail.com</a
+              ></span
+            >.
+          </p>
+          <div class="distortion"></div>
+          <button
+            class="resume"
+            onclick="window.open('./ressources/cv.pdf'); return true;"
+          >
+            Resume
+          </button>
+          <embed
+            src="./ressources/CV Julien Mousset (ENG).pdf"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+          />
+          <div class="social-links">
+            <a target="_blank" href="https://github.com/JulienMousset"
+              ><img class="github" src="./ressources/img/github.svg"
+            /></a>
+            <a target="_blank" href="https://bandcamp.com/zgari"
+              ><img class="bandcamp" src="./ressources/img/bandcamp.svg"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/julien-mousset/"
+              ><img class="linkedin" src="./ressources/img/linkedin.svg"
+            /></a>
+            <a href="mailto: contact.orlok@gmail.com"
+              ><img class="mail" src="./ressources/img/mail.svg"
+            /></a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"
+      integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./hover.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
