@@ -22,16 +22,16 @@ new hoverEffect({
 new hoverEffect({
   parent: document.querySelector(".distortion1"),
   intensity: 0.5,
-  image1: "./ressources/img/frankenstein.jpeg",
-  image2: "./ressources/img/frankenstein.jpeg",
+  image1: "./ressources/img/me2.jpg",
+  image2: "./ressources/img/me2.jpg",
   displacementImage: "./ressources/img/distortion.png",
 });
 
 new hoverEffect({
   parent: document.querySelector(".distortion2"),
   intensity: 0.5,
-  image1: "./ressources/img/cosmos.webp",
-  image2: "./ressources/img/cosmos.webp",
+  image1: "./ressources/img/devilman.jpg",
+  image2: "./ressources/img/devilman.jpg",
   displacementImage: "./ressources/img/cosmos.webp",
 });
 

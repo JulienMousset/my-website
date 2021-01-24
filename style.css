@@ -78,6 +78,7 @@ button:hover {
   position: fixed;
   top: 20px;
   right: 20px;
+  z-index: 3;
 }
 
 .logo:hover {
@@ -219,7 +220,7 @@ button:hover {
 .distortion1 {
   height: 280px;
   width: 400px;
-  transform: rotate(20deg);
+  transform: rotate(10deg);
   position: absolute;
   right: 10vh;
   top: 108vh;
@@ -249,7 +250,7 @@ button:hover {
 
 .img {
   position: absolute;
-  height: 25%;
+  height: 30%;
 }
 
 .img1 {
