@@ -20,55 +20,73 @@
       <main>
         <section data-scroll-section class="page-1">
           <h1 class="title">
-            <span data-scroll data-scroll-speed="1" class="title-1"
-              >Hi, I'm </span
-            ><span class="title-2"></span>
+            <span class="title-1">Hi, I'm </span><span class="title-2"></span>
           </h1>
-          <img
+          <img class="profile-color" src="./ressources/img/profile-color.jpg" />
+          <img class="profile-bw" src="./ressources/img/profile-bw.jpg" />
+          <p
+            data-scroll-class="scroll-opacity"
+            data-scroll-repeat="true"
             data-scroll
-            data-scroll-speed="1"
-            class="profile-color"
-            src="./ressources/img/profile-color.jpg"
-          />
-          <img
-            data-scroll
-            data-scroll-speed="1"
-            class="profile-bw"
-            src="./ressources/img/profile-bw.jpg"
-          />
-          <p data-scroll data-scroll-speed="1" class="intro">
+            data-scroll-speed="2"
+            class="intro"
+          >
             I’m a <span class="job">software engineer/web developer</span> based
             in Paris (France) with a strong interest in sound and design. I play
             around with HTML, (S)CSS, Javascript, Python and C. I’m currently
             learning Vue.js and back-end development while
-            <u>looking for an internship</u>.
+            <span class="highlight">looking for an internship</span>.
           </p>
-          <img class="stars-1" src="./ressources/img/stars-1.svg" />
-          <img class="stars-2" src="./ressources/img/stars-2.svg" />
-          <img class="stars-3" src="./ressources/img/stars-3.svg" />
-          <img class="stars-4" src="./ressources/img/stars-4.svg" />
+          <img class="stars" src="./ressources/img/stars.svg" />
         </section>
         <section data-scroll-section class="page-2">
-          <h1 data-scroll data-scroll-speed="1">About</h1>
-          <p data-scroll data-scroll-speed="1">
+          <h1 data-scroll data-scroll-speed="-1">About</h1>
+          <p
+            data-scroll-class="scroll-opacity"
+            data-scroll-repeat="true"
+            data-scroll
+            data-scroll-speed="2"
+            class="text"
+          >
             I graduated from Paris 1 Pantheon-Sorbonne University with a master
-            degree in <u>management of cultural projects and institutions</u>,
-            while working part-time as a cultural project manager. Then, in 2019
-            I decided to enter
+            degree in management of cultural projects and institutions, while
+            working part-time as a cultural project manager. Then, in 2019 I
+            decided to enter
             <a class="link" target="_blank" href="https://www.42.fr/">42</a>
-            in order to gain knowledge about <u>computer science</u>.
+            in order to gain knowledge about computer science.
           </p>
-          <img class="boom" src="./ressources/img/boom.svg" />
-          <img class="boom" src="./ressources/img/antic.svg" />
+          <img
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="4"
+            class="boom"
+            src="./ressources/img/boom.svg"
+          />
+          <img
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-4"
+            class="antic"
+            src="./ressources/img/antic.svg"
+          />
         </section>
         <section data-scroll-section class="page-3">
-          <h1 data-scroll data-scroll-speed="1">Me</h1>
-          <p data-scroll data-scroll-speed="1">
-            Whenever I get a chance, I <u>record music</u> and try to catch up
-            with my <u>reading</u> list or <u>exercise</u> when I need to get
-            away from the screen. I’m also passionate about
-            <u>basketball</u> even though I’m bad at it. I’m better at
-            <u>games</u>, whether they are board games or video games.
+          <h1 data-scroll data-scroll-speed="-1">Me</h1>
+          <p
+            data-scroll-class="scroll-opacity"
+            data-scroll-repeat="true"
+            data-scroll
+            data-scroll-speed="2"
+            class="text"
+          >
+            Whenever I get a chance, I
+            <span class="highlight">record music</span> and try to catch up with
+            my <span class="highlight">reading</span> list or
+            <span class="highlight">exercise</span> when I need to get away from
+            the screen. I’m also passionate about
+            <span class="highlight">basketball</span> even though I’m bad at it.
+            I’m better at <span class="highlight">games</span>, whether they are
+            board games or video games.
           </p>
           <img class="img img1" src="./ressources/img/landscape.jpg" />
           <img class="img img2" src="./ressources/img/sh2.jpg" />
@@ -76,14 +94,21 @@
           <img class="img img4" src="./ressources/img/glitch.jpg" />
           <img class="img img5" src="./ressources/img/devilman.jpg" />
           <img class="img img6" src="./ressources/img/basket.jpg" />
-          <img class="img img7" src="./ressources/img/music.jpg" />
         </section>
         <section data-scroll-section class="page-4">
-          <h1 data-scroll data-scroll-speed="1">Contact</h1>
-          <p data-scroll data-scroll-speed="1">
-            I’m currently <u>available for freelance work</u> as well as
-            <u>looking for an internship</u>. Whether you want to hire me, have
-            a question or just want to say hi, you can contact me at
+          <h1 data-scroll data-scroll-speed="-1">Contact</h1>
+          <p
+            data-scroll-class="scroll-opacity"
+            data-scroll-repeat="true"
+            data-scroll
+            data-scroll-speed="2"
+            class="text"
+          >
+            I’m currently
+            <span class="highlight">available for freelance work</span> as well
+            as <span class="highlight">looking for an internship</span>. Whether
+            you want to hire me, have a question or just want to say hi, you can
+            contact me at
             <span
               ><a class="e-mail" href="mailto: contact.orlok@gmail.com"
                 >contact.orlok@gmail.com</a
@@ -118,8 +143,22 @@
               ><img class="mail" src="./ressources/img/mail.svg"
             /></a>
           </div>
-          <img class="handshake" src="./ressources/img/handshake.svg" />
-          <img class="letter" src="./ressources/img/letter.svg" />
+          <div class="handshake">
+            <img
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              src="./ressources/img/handshake.svg"
+            />
+          </div>
+          <div class="letter">
+            <img
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="2"
+              src="./ressources/img/letter.svg"
+            />
+          </div>
         </section>
       </main>
     </div>

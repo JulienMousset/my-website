@@ -30,7 +30,7 @@ main {
 
 h1 {
   font-family: Astloch;
-  font-size: 96px;
+  font-size: 120px;
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
@@ -69,6 +69,10 @@ button:hover {
   background: #f4f4f4;
 }
 
+.highlight {
+  color: #ffffa1;
+}
+
 .logo {
   height: 16px;
   width: 16px;
@@ -86,7 +90,7 @@ button:hover {
 }
 
 .page-1 {
-  height: 100vh;
+  height: 150vh;
   background-color: #1a1a1a;
   color: #f4f4f4;
   display: grid;
@@ -149,8 +153,14 @@ button:hover {
   }
 }
 
+.stars {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+}
+
 .page-2 {
-  height: 100vh;
+  height: 150vh;
   background-color: #f4f4f4;
   color: #1a1a1a;
   display: grid;
@@ -174,7 +184,7 @@ button:hover {
 }
 
 .page-3 {
-  height: 100vh;
+  height: 150vh;
   background-color: #52ab7a;
   color: #f4f4f4;
   display: grid;
@@ -183,7 +193,7 @@ button:hover {
 }
 
 .page-4 {
-  height: 100vh;
+  height: 150vh;
   background-color: #1a1a1a;
   color: #f4f4f4;
   display: grid;
@@ -264,12 +274,6 @@ button:hover {
   animation: circle1 20s linear infinite;
 }
 
-.img7 {
-  left: 20vh;
-  top: 50vh;
-  animation: circle1 20s linear infinite;
-}
-
 @keyframes circle1 {
   from {
     transform: rotate(0deg) translate(-40px) rotate(0deg);
@@ -304,4 +308,42 @@ button:hover {
   to {
     transform: rotate(-360deg) translate(-20px) rotate(360deg);
   }
+}
+
+.handshake {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-self: center;
+  transform: rotate(-30deg);
+}
+
+.letter {
+  grid-column: 3/4;
+  grid-row: 5/6;
+  justify-self: center;
+  transform: rotate(15deg);
+}
+
+.boom {
+  height: 80%;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  justify-self: center;
+  align-self: center;
+}
+
+.antic {
+  height: 80%;
+  grid-column: 3/4;
+  grid-row: 4/5;
+  justify-self: center;
+}
+
+.text {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.scroll-opacity {
+  opacity: 1;
 }
