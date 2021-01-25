@@ -208,33 +208,6 @@ button:hover {
   background-color: #f4f4f4;
 }
 
-.distortion {
-  height: 350px;
-  width: 500px;
-  transform: rotate(10deg);
-  position: absolute;
-  left: 15vh;
-  top: 350vh;
-}
-
-.distortion1 {
-  height: 280px;
-  width: 400px;
-  transform: rotate(10deg);
-  position: absolute;
-  right: 10vh;
-  top: 108vh;
-}
-
-.distortion2 {
-  height: 300px;
-  width: 440px;
-  transform: rotate(-15deg);
-  position: absolute;
-  left: 5vh;
-  top: 150vh;
-}
-
 .social-links {
   color: #f4f4f4;
   grid-column: 2/3;
@@ -252,33 +225,49 @@ button:hover {
   opacity: 0.75;
   position: absolute;
   height: 30%;
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 .img1 {
   right: 10vh;
-  top: 230vh;
+  top: 30vh;
   animation: circle1 15s linear infinite;
 }
 
 .img2 {
   left: 30vh;
-  top: 260vh;
+  top: 60vh;
   animation: circle2 20s linear infinite;
 }
 
 .img3 {
-  height: 40%;
   right: 20vh;
-  top: 270vh;
+  top: 70vh;
   animation: circle3 20s linear infinite;
 }
 
 .img4 {
-  height: 30%;
   left: 50vh;
-  top: 220vh;
+  top: 20vh;
   animation: circle4 20s linear infinite;
+}
+
+.img5 {
+  left: 20vh;
+  top: 10vh;
+  animation: circle3 20s linear infinite;
+}
+
+.img6 {
+  right: 20vh;
+  top: 50vh;
+  animation: circle1 20s linear infinite;
+}
+
+.img7 {
+  left: 20vh;
+  top: 50vh;
+  animation: circle1 20s linear infinite;
 }
 
 @keyframes circle1 {

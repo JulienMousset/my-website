@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./locomotive-scroll.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <script src="./blotter.min.js"></script>
@@ -10,30 +11,46 @@
     <title>Julien Mousset</title>
   </head>
   <body>
-    <div class="portfolio">
+    <div data-scroll-container class="portfolio">
       <header>
         <nav>
           <div class="logo"></div>
         </nav>
       </header>
       <main>
-        <section class="page-1">
+        <section data-scroll-section class="page-1">
           <h1 class="title">
-            <span class="title-1">Hi, I'm </span><span class="title-2"></span>
+            <span data-scroll data-scroll-speed="1" class="title-1"
+              >Hi, I'm </span
+            ><span class="title-2"></span>
           </h1>
-          <img class="profile-color" src="./ressources/img/profile-color.jpg" />
-          <img class="profile-bw" src="./ressources/img/profile-bw.jpg" />
-          <p class="intro">
+          <img
+            data-scroll
+            data-scroll-speed="1"
+            class="profile-color"
+            src="./ressources/img/profile-color.jpg"
+          />
+          <img
+            data-scroll
+            data-scroll-speed="1"
+            class="profile-bw"
+            src="./ressources/img/profile-bw.jpg"
+          />
+          <p data-scroll data-scroll-speed="1" class="intro">
             I’m a <span class="job">software engineer/web developer</span> based
             in Paris (France) with a strong interest in sound and design. I play
             around with HTML, (S)CSS, Javascript, Python and C. I’m currently
             learning Vue.js and back-end development while
             <u>looking for an internship</u>.
           </p>
+          <img class="stars-1" src="./ressources/img/stars-1.svg" />
+          <img class="stars-2" src="./ressources/img/stars-2.svg" />
+          <img class="stars-3" src="./ressources/img/stars-3.svg" />
+          <img class="stars-4" src="./ressources/img/stars-4.svg" />
         </section>
-        <section class="page-2">
-          <h1>About</h1>
-          <p>
+        <section data-scroll-section class="page-2">
+          <h1 data-scroll data-scroll-speed="1">About</h1>
+          <p data-scroll data-scroll-speed="1">
             I graduated from Paris 1 Pantheon-Sorbonne University with a master
             degree in <u>management of cultural projects and institutions</u>,
             while working part-time as a cultural project manager. Then, in 2019
@@ -41,12 +58,12 @@
             <a class="link" target="_blank" href="https://www.42.fr/">42</a>
             in order to gain knowledge about <u>computer science</u>.
           </p>
-          <div class="distortion1"></div>
-          <div class="distortion2"></div>
+          <img class="boom" src="./ressources/img/boom.svg" />
+          <img class="boom" src="./ressources/img/antic.svg" />
         </section>
-        <section class="page-3">
-          <h1>Me</h1>
-          <p>
+        <section data-scroll-section class="page-3">
+          <h1 data-scroll data-scroll-speed="1">Me</h1>
+          <p data-scroll data-scroll-speed="1">
             Whenever I get a chance, I <u>record music</u> and try to catch up
             with my <u>reading</u> list or <u>exercise</u> when I need to get
             away from the screen. I’m also passionate about
@@ -57,10 +74,13 @@
           <img class="img img2" src="./ressources/img/sh2.jpg" />
           <img class="img img3" src="./ressources/img/cows.jpg" />
           <img class="img img4" src="./ressources/img/glitch.jpg" />
+          <img class="img img5" src="./ressources/img/devilman.jpg" />
+          <img class="img img6" src="./ressources/img/basket.jpg" />
+          <img class="img img7" src="./ressources/img/music.jpg" />
         </section>
-        <section class="page-4">
-          <h1>Contact</h1>
-          <p>
+        <section data-scroll-section class="page-4">
+          <h1 data-scroll data-scroll-speed="1">Contact</h1>
+          <p data-scroll data-scroll-speed="1">
             I’m currently <u>available for freelance work</u> as well as
             <u>looking for an internship</u>. Whether you want to hire me, have
             a question or just want to say hi, you can contact me at
@@ -70,7 +90,6 @@
               ></span
             >.
           </p>
-          <div class="distortion"></div>
           <button
             class="resume"
             onclick="window.open('./ressources/cv.pdf'); return true;"
@@ -99,6 +118,8 @@
               ><img class="mail" src="./ressources/img/mail.svg"
             /></a>
           </div>
+          <img class="handshake" src="./ressources/img/handshake.svg" />
+          <img class="letter" src="./ressources/img/letter.svg" />
         </section>
       </main>
     </div>
@@ -112,7 +133,7 @@
       integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw=="
       crossorigin="anonymous"
     ></script>
-    <script src="./hover.js"></script>
+    <script src="locomotive-scroll.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
