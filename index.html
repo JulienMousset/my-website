@@ -14,7 +14,14 @@
     <div data-scroll-container class="portfolio">
       <header>
         <nav>
+          <section class="items">
+            <h1 class="item">HOME</h1>
+            <h1 class="item">ABOUT</h1>
+            <h1 class="item">ME</h1>
+            <h1 class="item">CONTACT</h1>
+          </section>
           <div class="logo"></div>
+          <div class="menu"></div>
         </nav>
       </header>
       <main>
@@ -37,7 +44,13 @@
             learning Vue.js and back-end development while
             <span class="highlight">looking for an internship</span>.
           </p>
-          <img class="stars" src="./ressources/img/stars.svg" />
+          <img
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target=".page-1"
+            class="stars"
+            src="./ressources/img/stars.svg"
+          />
         </section>
         <section data-scroll-section class="page-2">
           <h1 data-scroll data-scroll-speed="-2">About</h1>
@@ -96,6 +109,7 @@
           <img class="img img6" src="./ressources/img/basket.jpg" />
         </section>
         <section data-scroll-section class="page-4">
+          <img class="cv" src="./ressources/img/cv.jpg" />
           <h1 data-scroll data-scroll-speed="-2">Contact</h1>
           <p
             data-scroll-class="scroll-opacity"
@@ -120,7 +134,6 @@
             data-scroll-repeat="true"
             data-scroll
             class="resume"
-            onclick="window.open('./ressources/cv.pdf'); return true;"
           >
             Resume
           </button>

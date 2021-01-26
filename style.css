@@ -132,9 +132,9 @@ button:hover {
 }
 
 .intro {
-  font-size: 36px;
+  font-size: 48px;
   grid-column: 2/4;
-  grid-row: 2/3;
+  grid-row: 3/4;
   justify-self: center;
   align-self: end;
   opacity: 0;
@@ -238,7 +238,7 @@ button:hover {
 .img {
   opacity: 0.75;
   position: absolute;
-  height: 20%;
+  height: 22%;
   border-radius: 50px;
 }
 
@@ -350,4 +350,63 @@ button:hover {
 
 .scroll-opacity {
   opacity: 1;
+}
+
+.menu {
+  height: 16px;
+  width: 16px;
+  background-color: #f7aea8;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.items {
+  background-color: #f7aea8;
+  height: 100vh;
+}
+
+/*.nav-links {
+  position: fixed;
+  background: #5b78c7;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  clip-path: circle(8px at 98% 3%);
+  -webkit-clip-path: circle(8px at 20px 20px);
+  transition: all 1s ease-out;
+  pointer-events: none;
+  z-index: 2;
+}
+.nav-links.open {
+  clip-path: circle(4000px at 20px 20px);
+  -webkit-clip-path: circle(4000px at 20px 20px);
+  pointer-events: all;
+}
+
+.nav-links li {
+  opacity: 0;
+}
+.nav-links li a {
+  font-size: 25px;
+}
+.nav-links li:nth-child(1) {
+  transition: all 0.5s ease 0.2s;
+}
+.nav-links li:nth-child(2) {
+  transition: all 0.5s ease 0.4s;
+}
+.nav-links li:nth-child(3) {
+  transition: all 0.5s ease 0.6s;
+}
+li.fade {
+  opacity: 1;
+}*/
+
+.cv {
+  width: 0%;
+  cursor: pointer;
+  opacity: 0;
 }

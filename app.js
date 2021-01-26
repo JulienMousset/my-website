@@ -120,3 +120,46 @@ const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
 });
+
+const cv = document.querySelector(".cv");
+const button = document.querySelector("button");
+
+cv.addEventListener("click", (e) => {
+  cv.style.transition = "all 0.75s ease";
+  cv.style.width = "0%";
+  cv.style.opacity = 0;
+});
+
+button.addEventListener("click", (e) => {
+  cv.style.transition = "all 0.75s ease";
+  cv.style.width = "196%";
+  cv.style.opacity = 1;
+});
+
+const menu = document.querySelector(".menu");
+
+logo.addEventListener("click", (e) => {
+  if (menu.classList.contains("open")) {
+    menu.style.transition = "all 0.5s ease";
+    menu.style.transform = "scale(1)";
+    logo.style.transition = "all 0.5s ease";
+    logo.style.background = "#f7aea8";
+    menu.classList.remove("open");
+  } else {
+    menu.style.transition = "all 0.75s ease";
+    menu.style.transform = "scale(1000)";
+    logo.style.transition = "all 0.75s ease";
+    logo.style.background = "#1a1a1a";
+    menu.classList.add("open");
+  }
+});
+
+/*const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links li");
+
+logo.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  links.forEach(link => {
+    link.classList.toggle("fade");
+  });
+});*/
