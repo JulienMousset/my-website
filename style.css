@@ -60,7 +60,9 @@ button {
   grid-column: 2/3;
   grid-row: 5/6;
   justify-self: center;
-  align-self: center;
+  align-self: start;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
 button:hover {
@@ -90,7 +92,7 @@ button:hover {
 }
 
 .page-1 {
-  height: 150vh;
+  height: 200vh;
   background-color: #1a1a1a;
   color: #f4f4f4;
   display: grid;
@@ -101,7 +103,7 @@ button:hover {
 .title {
   grid-column: 2/3;
   justify-self: left;
-  align-self: center;
+  align-self: start;
 }
 
 .title-1 {
@@ -109,7 +111,7 @@ button:hover {
 }
 
 .profile-bw {
-  height: 430px;
+  height: 480px;
   border-radius: 30px;
   grid-column: 3/4;
   grid-row: 2/3;
@@ -118,7 +120,7 @@ button:hover {
 }
 
 .profile-color {
-  height: 430px;
+  height: 480px;
   border-radius: 30px;
   grid-column: 3/4;
   grid-row: 2/3;
@@ -130,11 +132,13 @@ button:hover {
 }
 
 .intro {
-  font-size: 30px;
+  font-size: 36px;
   grid-column: 2/4;
-  grid-row: 3/4;
+  grid-row: 2/3;
   justify-self: center;
-  align-self: center;
+  align-self: end;
+  opacity: 0;
+  transition: opacity 1.5s;
 }
 
 .job {
@@ -234,44 +238,44 @@ button:hover {
 .img {
   opacity: 0.75;
   position: absolute;
-  height: 30%;
+  height: 20%;
   border-radius: 50px;
 }
 
 .img1 {
-  right: 10vh;
-  top: 30vh;
-  animation: circle1 15s linear infinite;
+  right: 15vh;
+  top: 20vh;
+  animation: circle1 20s linear infinite;
 }
 
 .img2 {
   left: 30vh;
-  top: 60vh;
+  top: 100vh;
   animation: circle2 20s linear infinite;
 }
 
 .img3 {
   right: 20vh;
-  top: 70vh;
+  top: 95vh;
   animation: circle3 20s linear infinite;
 }
 
 .img4 {
-  left: 50vh;
-  top: 20vh;
-  animation: circle4 20s linear infinite;
+  left: 60vh;
+  top: 50vh;
+  animation: circle4 15s linear infinite;
 }
 
 .img5 {
   left: 20vh;
-  top: 10vh;
-  animation: circle3 20s linear infinite;
+  top: 40vh;
+  animation: circle1 15s linear infinite;
 }
 
 .img6 {
-  right: 20vh;
+  right: 35vh;
   top: 50vh;
-  animation: circle1 20s linear infinite;
+  animation: circle1 15s linear infinite;
 }
 
 @keyframes circle1 {
@@ -320,7 +324,7 @@ button:hover {
 .letter {
   grid-column: 3/4;
   grid-row: 5/6;
-  justify-self: center;
+  justify-self: left;
   transform: rotate(15deg);
 }
 
