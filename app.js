@@ -116,11 +116,6 @@ mail.addEventListener("mouseleave", (e) => {
   mail.style.transform = "scale(1)";
 });
 
-const scroller = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-});
-
 const cv = document.querySelector(".cv");
 const button = document.querySelector("button");
 
@@ -137,29 +132,179 @@ button.addEventListener("click", (e) => {
 });
 
 const menu = document.querySelector(".menu");
+const items = document.querySelector(".items");
 
 logo.addEventListener("click", (e) => {
   if (menu.classList.contains("open")) {
     menu.style.transition = "all 0.5s ease";
     menu.style.transform = "scale(1)";
     logo.style.transition = "all 0.5s ease";
-    logo.style.background = "#f7aea8";
+    items.style.transition = "all 0.5s ease";
+    logo.style.backgroundColor = "#f7aea8";
+    items.style.color = "transparent";
+    items.style.opacity = "0";
+    items.style.cursor = "default";
+    items.style.pointerEvents = "none";
     menu.classList.remove("open");
+    scroller.start();
   } else {
     menu.style.transition = "all 0.75s ease";
     menu.style.transform = "scale(1000)";
     logo.style.transition = "all 0.75s ease";
-    logo.style.background = "#1a1a1a";
+    items.style.transition = "all 1s ease";
+    logo.style.backgroundColor = "#1a1a1a";
+    items.style.opacity = "1";
+    items.style.color = "#1a1a1a";
+    items.style.cursor = "pointer";
+    items.style.pointerEvents = "all";
     menu.classList.add("open");
+    scroller.stop();
   }
 });
 
-/*const navLinks = document.querySelector(".nav-links");
-const links = document.querySelectorAll(".nav-links li");
+const item1 = document.querySelector(".item-1");
+const item2 = document.querySelector(".item-2");
+const item3 = document.querySelector(".item-3");
+const item4 = document.querySelector(".item-4");
 
-logo.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-  links.forEach(link => {
-    link.classList.toggle("fade");
-  });
-});*/
+const page1 = document.querySelector(".page-1");
+const page2 = document.querySelector(".page-2");
+const page3 = document.querySelector(".page-3");
+const page4 = document.querySelector(".page-4");
+
+item1.addEventListener("mouseenter", (e) => {
+  item1.style.transition = "all 0.25s ease";
+  item1.style.color = "#f4f4f4";
+  logo.style.backgroundColor = "#f4f4f4";
+});
+
+item1.addEventListener("mouseleave", (e) => {
+  item1.style.transition = "all 0.25s ease";
+  item1.style.color = "#1a1a1a";
+  if (menu.classList.contains("open")) {
+    logo.style.backgroundColor = "#1a1a1a";
+  } else {
+    logo.style.backgroundColor = "#f7aea8";
+  }
+});
+
+item2.addEventListener("mouseenter", (e) => {
+  item2.style.transition = "all 0.25s ease";
+  item2.style.color = "#f4f4f4";
+  logo.style.backgroundColor = "#f4f4f4";
+});
+
+item2.addEventListener("mouseleave", (e) => {
+  item2.style.transition = "all 0.25s ease";
+  item2.style.color = "#1a1a1a";
+  if (menu.classList.contains("open")) {
+    logo.style.backgroundColor = "#1a1a1a";
+  } else {
+    logo.style.backgroundColor = "#f7aea8";
+  }
+});
+
+item3.addEventListener("mouseenter", (e) => {
+  item3.style.transition = "all 0.25s ease";
+  item3.style.color = "#f4f4f4";
+  logo.style.backgroundColor = "#f4f4f4";
+});
+
+item3.addEventListener("mouseleave", (e) => {
+  item3.style.transition = "all 0.25s ease";
+  item3.style.color = "#1a1a1a";
+  if (menu.classList.contains("open")) {
+    logo.style.backgroundColor = "#1a1a1a";
+  } else {
+    logo.style.backgroundColor = "#f7aea8";
+  }
+});
+
+item4.addEventListener("mouseenter", (e) => {
+  item4.style.transition = "all 0.25s ease";
+  item4.style.color = "#f4f4f4";
+  logo.style.backgroundColor = "#f4f4f4";
+});
+
+item4.addEventListener("mouseleave", (e) => {
+  item4.style.transition = "all 0.25s ease";
+  item4.style.color = "#1a1a1a";
+  if (menu.classList.contains("open")) {
+    logo.style.backgroundColor = "#1a1a1a";
+  } else {
+    logo.style.backgroundColor = "#f7aea8";
+  }
+});
+
+item1.addEventListener("click", (e) => {
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  logo.style.transition = "all 0.5s ease";
+  items.style.transition = "all 0.5s ease";
+  logo.style.background = "#f7aea8";
+  logo.style.backgroundColor = "#f7aea8";
+  menu.style.backgroundColor = "#f7aea8";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page1);
+});
+
+item2.addEventListener("click", (e) => {
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  logo.style.transition = "all 0.5s ease";
+  items.style.transition = "all 0.5s ease";
+  logo.style.background = "#f7aea8";
+  logo.style.backgroundColor = "#f7aea8";
+  menu.style.backgroundColor = "#f7aea8";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page2, { offset: "200" });
+});
+
+item3.addEventListener("click", (e) => {
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  logo.style.transition = "all 0.5s ease";
+  items.style.transition = "all 0.5s ease";
+  logo.style.background = "#f7aea8";
+  logo.style.backgroundColor = "#f7aea8";
+  menu.style.backgroundColor = "#f7aea8";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page3, { offset: "200" });
+});
+
+item4.addEventListener("click", (e) => {
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  logo.style.transition = "all 0.5s ease";
+  items.style.transition = "all 0.5s ease";
+  logo.style.background = "#f7aea8";
+  logo.style.backgroundColor = "#f7aea8";
+  menu.style.backgroundColor = "#f7aea8";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page4, { offset: "200" });
+});
+
+const scroller = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+});
