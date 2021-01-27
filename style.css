@@ -342,6 +342,7 @@ button {
   cursor: pointer;
   opacity: 0;
   grid-column: 2/3;
+  transform: translate(-250%);
 }
 
 .menu {

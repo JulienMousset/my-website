@@ -149,15 +149,17 @@ const cv = document.querySelector(".cv");
 const button = document.querySelector("button");
 
 cv.addEventListener("mouseleave", (e) => {
-  cv.style.transition = "all 0.5s ease";
+  cv.style.transition = "all 0.75s ease";
   cv.style.width = "0%";
   cv.style.opacity = 0;
+  cv.style.transform = "translate(-250%)";
 });
 
 cv.addEventListener("click", (e) => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "0%";
   cv.style.opacity = 0;
+  cv.style.transform = "translate(-250%)";
   scroller.scrollTo("bottom");
 });
 
@@ -165,6 +167,7 @@ button.addEventListener("click", (e) => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "100%";
   cv.style.opacity = 1;
+  cv.style.transform = "translate(0%)";
   scroller.scrollTo(page4);
 });
 
