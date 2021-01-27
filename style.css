@@ -221,45 +221,50 @@ button {
 }
 
 .img {
-  opacity: 0.9;
+  opacity: 0.85;
   position: absolute;
-  height: 22%;
-  border-radius: 0px;
+  border-radius: 30px;
 }
 
 .img1 {
   right: 30vh;
-  top: 35vh;
+  top: 30vh;
+  height: 22%;
   animation: circle1 20s linear infinite;
 }
 
 .img2 {
   left: 30vh;
-  top: 85vh;
+  top: 105vh;
+  height: 20%;
   animation: circle2 20s linear infinite;
 }
 
 .img3 {
-  right: 15vh;
-  top: 90vh;
+  right: 10vh;
+  top: 70vh;
+  height: 26%;
   animation: circle3 20s linear infinite;
 }
 
 .img4 {
-  left: 60vh;
-  top: 50vh;
+  left: 65vh;
+  top: 30vh;
+  height: 28%;
   animation: circle4 15s linear infinite;
 }
 
 .img5 {
   left: 25vh;
-  top: 40vh;
+  top: 60vh;
+  height: 30%;
   animation: circle1 15s linear infinite;
 }
 
 .img6 {
-  right: 35vh;
-  top: 65vh;
+  right: 60vh;
+  top: 100vh;
+  height: 28%;
   animation: circle1 15s linear infinite;
 }
 
