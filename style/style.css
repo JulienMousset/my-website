@@ -49,9 +49,9 @@ a {
 
 button {
   border: 5px solid #f4f4f4;
-  background: transparent;
   width: 170px;
   height: 60px;
+  background: transparent;
   cursor: pointer;
   font-family: Roboto-Bold;
   font-size: 20px;
@@ -70,8 +70,8 @@ button {
 .logo {
   height: 16px;
   width: 16px;
-  background-color: #f7aea8;
   border-radius: 50%;
+  background-color: #f7aea8;
   cursor: pointer;
   position: fixed;
   top: 20px;
@@ -82,8 +82,8 @@ button {
 .menu {
   height: 16px;
   width: 16px;
-  background-color: #f7aea8;
   border-radius: 50%;
+  background-color: #f7aea8;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -91,14 +91,14 @@ button {
 }
 
 .items {
-  position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translate(20px, -50%);
   color: transparent;
-  z-index: 2;
   cursor: default;
   pointer-events: none;
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translate(20px, -50%);
+  z-index: 2;
 }
 
 .item {
@@ -160,9 +160,9 @@ button {
 }
 
 .job {
+  border-radius: 30px;
   color: #1a1a1a;
   background-color: #f4f4f4;
-  border-radius: 30px;
   animation: job-blink 1.5s ease-in-out infinite alternate;
 }
 
@@ -200,12 +200,12 @@ button {
 }
 
 .link {
-  color: inherit;
-  cursor: pointer;
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
   border-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
 }
 
 .page-3 {
@@ -218,50 +218,50 @@ button {
 }
 
 .img {
-  opacity: 0.9;
-  position: absolute;
   border-radius: 30px;
+  position: absolute;
+  opacity: 0.9;
 }
 
 .img-1 {
-  right: 30vh;
-  top: 30vh;
   height: 22%;
+  top: 30vh;
+  right: 30vh;
   animation: circle-1 20s linear infinite;
 }
 
 .img-2 {
-  left: 30vh;
-  top: 105vh;
   height: 20%;
+  top: 105vh;
+  left: 30vh;
   animation: circle-2 20s linear infinite;
 }
 
 .img-3 {
-  right: 10vh;
-  top: 70vh;
   height: 26%;
+  top: 70vh;
+  right: 10vh;
   animation: circle-3 20s linear infinite;
 }
 
 .img-4 {
-  left: 65vh;
-  top: 30vh;
   height: 28%;
+  top: 30vh;
+  left: 65vh;
   animation: circle-4 15s linear infinite;
 }
 
 .img-5 {
-  left: 25vh;
-  top: 60vh;
   height: 30%;
+  top: 60vh;
+  left: 25vh;
   animation: circle-1 15s linear infinite;
 }
 
 .img-6 {
-  right: 60vh;
-  top: 100vh;
   height: 28%;
+  top: 100vh;
+  right: 60vh;
   animation: circle-1 15s linear infinite;
 }
 
@@ -312,27 +312,27 @@ button {
 }
 
 .handshake {
+  transform: rotate(-30deg);
   grid-column: 1/2;
   grid-row: 3/4;
   justify-self: center;
-  transform: rotate(-30deg);
 }
 
 .letter {
+  transform: rotate(15deg);
   grid-column: 3/4;
   grid-row: 5/6;
   justify-self: left;
-  transform: rotate(15deg);
 }
 
 .e-mail {
-  font-family: Astloch;
-  color: #f4f4f4;
-  cursor: pointer;
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
   border-color: #f4f4f4;
+  font-family: Astloch;
+  color: #f4f4f4;
+  cursor: pointer;
 }
 
 .social-links {
@@ -344,8 +344,8 @@ button {
 }
 
 .social-links img {
-  cursor: pointer;
   padding: 0px 30px;
+  cursor: pointer;
 }
 
 .cv {

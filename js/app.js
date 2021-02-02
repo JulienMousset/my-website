@@ -26,34 +26,6 @@ const scroller = new LocomotiveScroll({
   smooth: true,
 });
 
-let imgArr = document.querySelectorAll(".img");
-let prevX = 0;
-let prevY = 0;
-let moveXAmount = 0;
-let moveYAmount = 0;
-
-document.addEventListener("mousemove", (e) => {
-  mousePos(e);
-});
-
-function mousePos(e) {
-  moveXAmount = e.pageX - prevX;
-  moveYAmount = e.pageY - prevY;
-
-  moveImg(moveXAmount, moveYAmount);
-
-  prevX = e.pageX;
-  prevY = e.pageY;
-}
-function moveImg(xAmount, yAmount) {
-  imgArr.forEach(function (img) {
-    let movementStrength = 5 + Math.random() * 20;
-
-    img.style.left = img.offsetLeft - xAmount / movementStrength + "px";
-    img.style.top = img.offsetTop - yAmount / movementStrength + "px";
-  });
-}
-
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
@@ -66,10 +38,10 @@ logo.addEventListener("mouseleave", () => {
 
 logo.addEventListener("click", () => {
   if (menu.classList.contains("open")) {
-    menu.style.transition = "all 0.5s ease";
-    menu.style.transform = "scale(1)";
     logo.style.transition = "all 0.5s ease";
+    menu.style.transition = "all 0.5s ease";
     items.style.transition = "all 0.5s ease";
+    menu.style.transform = "scale(1)";
     logo.style.backgroundColor = "#f7aea8";
     items.style.color = "transparent";
     items.style.opacity = "0";
@@ -78,13 +50,13 @@ logo.addEventListener("click", () => {
     menu.classList.remove("open");
     scroller.start();
   } else {
-    menu.style.transition = "all 0.75s ease";
-    menu.style.transform = "scale(1000)";
     logo.style.transition = "all 0.75s ease";
+    menu.style.transition = "all 0.75s ease";
     items.style.transition = "all 1s ease";
+    menu.style.transform = "scale(1000)";
     logo.style.backgroundColor = "#1a1a1a";
-    items.style.opacity = "1";
     items.style.color = "#1a1a1a";
+    items.style.opacity = "1";
     items.style.cursor = "pointer";
     items.style.pointerEvents = "all";
     menu.classList.add("open");
@@ -93,17 +65,17 @@ logo.addEventListener("click", () => {
 });
 
 item1.addEventListener("mouseenter", () => {
+  item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  item1.style.transition = "all 0.25s ease";
-  item1.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
+  item1.style.color = "#f4f4f4";
 });
 
 item1.addEventListener("mouseleave", () => {
+  item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-  item1.style.transition = "all 0.25s ease";
   item1.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
     logo.style.backgroundColor = "#1a1a1a";
@@ -113,9 +85,9 @@ item1.addEventListener("mouseleave", () => {
 });
 
 item1.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  items.style.transition = "all 0.5s ease";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -126,17 +98,17 @@ item1.addEventListener("click", () => {
 });
 
 item2.addEventListener("mouseenter", () => {
+  item2.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  item2.style.transition = "all 0.25s ease";
-  item2.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
+  item2.style.color = "#f4f4f4";
 });
 
 item2.addEventListener("mouseleave", () => {
+  item2.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-  item2.style.transition = "all 0.25s ease";
   item2.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
     logo.style.backgroundColor = "#1a1a1a";
@@ -146,9 +118,9 @@ item2.addEventListener("mouseleave", () => {
 });
 
 item2.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  items.style.transition = "all 0.5s ease";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -159,17 +131,17 @@ item2.addEventListener("click", () => {
 });
 
 item3.addEventListener("mouseenter", () => {
+  item3.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  item3.style.transition = "all 0.25s ease";
-  item3.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
+  item3.style.color = "#f4f4f4";
 });
 
 item3.addEventListener("mouseleave", () => {
+  item3.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-  item3.style.transition = "all 0.25s ease";
   item3.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
     logo.style.backgroundColor = "#1a1a1a";
@@ -179,9 +151,9 @@ item3.addEventListener("mouseleave", () => {
 });
 
 item3.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  items.style.transition = "all 0.5s ease";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -192,17 +164,17 @@ item3.addEventListener("click", () => {
 });
 
 item4.addEventListener("mouseenter", () => {
+  item4.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  item4.style.transition = "all 0.25s ease";
-  item4.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
+  item4.style.color = "#f4f4f4";
 });
 
 item4.addEventListener("mouseleave", () => {
+  item4.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-  item4.style.transition = "all 0.25s ease";
   item4.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
     logo.style.backgroundColor = "#1a1a1a";
@@ -212,9 +184,9 @@ item4.addEventListener("mouseleave", () => {
 });
 
 item4.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  items.style.transition = "all 0.5s ease";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -256,62 +228,90 @@ container.addEventListener("mouseleave", () => {
 
 link.addEventListener("mouseenter", () => {
   link.style.transition = "all 0.25s ease";
-  link.style.color = "#f4f4f4";
   link.style.backgroundColor = "#1a1a1a";
+  link.style.color = "#f4f4f4";
 });
 
 link.addEventListener("mouseleave", () => {
   link.style.transition = "all 0.25s ease";
-  link.style.color = "#1a1a1a";
   link.style.backgroundColor = "#f4f4f4";
+  link.style.color = "#1a1a1a";
 });
+
+let imgArr = document.querySelectorAll(".img");
+let prevX = 0;
+let prevY = 0;
+let moveXAmount = 0;
+let moveYAmount = 0;
+
+document.addEventListener("mousemove", (e) => {
+  mousePos(e);
+});
+
+function mousePos(e) {
+  moveXAmount = e.pageX - prevX;
+  moveYAmount = e.pageY - prevY;
+
+  moveImg(moveXAmount, moveYAmount);
+
+  prevX = e.pageX;
+  prevY = e.pageY;
+}
+function moveImg(xAmount, yAmount) {
+  imgArr.forEach(function (img) {
+    let movementStrength = 5 + Math.random() * 20;
+
+    img.style.left = img.offsetLeft - xAmount / movementStrength + "px";
+    img.style.top = img.offsetTop - yAmount / movementStrength + "px";
+  });
+}
 
 email.addEventListener("mouseenter", () => {
   email.style.transition = "all 0.25s ease";
-  email.style.color = "#1a1a1a";
   email.style.backgroundColor = "#f4f4f4";
+  email.style.color = "#1a1a1a";
 });
 
 email.addEventListener("mouseleave", () => {
   email.style.transition = "all 0.25s ease";
-  email.style.color = "#f4f4f4";
   email.style.backgroundColor = "#1a1a1a";
+  email.style.color = "#f4f4f4";
 });
 
 button.addEventListener("mouseenter", () => {
   button.style.transition = "all 0.25s ease";
-  button.style.color = "#1a1a1a";
-  button.style.backgroundColor = "#f4f4f4";
   button.style.border = "5px solid #1a1a1a";
+  button.style.backgroundColor = "#f4f4f4";
+  button.style.color = "#1a1a1a";
 });
 
 button.addEventListener("mouseleave", () => {
   button.style.transition = "all 0.25s ease";
-  button.style.color = "#f4f4f4";
-  button.style.backgroundColor = "#1a1a1a";
   button.style.border = "5px solid #f4f4f4";
+  button.style.backgroundColor = "#1a1a1a";
+  button.style.color = "#f4f4f4";
 });
 
 button.addEventListener("click", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "100%";
-  cv.style.opacity = 1;
   cv.style.transform = "translate(0%)";
+  cv.style.opacity = 1;
   scroller.scrollTo(page4);
 });
 
 cv.addEventListener("mouseleave", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "0%";
-  cv.style.opacity = 0;
   cv.style.transform = "translate(-250%)";
+  cv.style.opacity = 0;
 });
 
 cv.addEventListener("click", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "0%";
-  cv.style.opacity = 0;
   cv.style.transform = "translate(-250%)";
+  cv.style.opacity = 0;
   scroller.scrollTo("bottom");
 });
 
