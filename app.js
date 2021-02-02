@@ -87,9 +87,6 @@ logo.addEventListener("click", () => {
     items.style.color = "#1a1a1a";
     items.style.cursor = "pointer";
     items.style.pointerEvents = "all";
-    cv.style.transition = "all 0.75s ease";
-    cv.style.width = "0%";
-    cv.style.opacity = 0;
     menu.classList.add("open");
     scroller.stop();
   }
@@ -97,6 +94,7 @@ logo.addEventListener("click", () => {
 
 item1.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(2)";
   item1.style.transition = "all 0.25s ease";
   item1.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
@@ -104,6 +102,7 @@ item1.addEventListener("mouseenter", () => {
 
 item1.addEventListener("mouseleave", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
   item1.style.transition = "all 0.25s ease";
   item1.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
@@ -116,11 +115,7 @@ item1.addEventListener("mouseleave", () => {
 item1.addEventListener("click", () => {
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  logo.style.transition = "all 0.5s ease";
   items.style.transition = "all 0.5s ease";
-  logo.style.background = "#f7aea8";
-  logo.style.backgroundColor = "#f7aea8";
-  menu.style.backgroundColor = "#f7aea8";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -132,6 +127,7 @@ item1.addEventListener("click", () => {
 
 item2.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(2)";
   item2.style.transition = "all 0.25s ease";
   item2.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
@@ -139,6 +135,7 @@ item2.addEventListener("mouseenter", () => {
 
 item2.addEventListener("mouseleave", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
   item2.style.transition = "all 0.25s ease";
   item2.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
@@ -151,11 +148,7 @@ item2.addEventListener("mouseleave", () => {
 item2.addEventListener("click", () => {
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  logo.style.transition = "all 0.5s ease";
   items.style.transition = "all 0.5s ease";
-  logo.style.background = "#f7aea8";
-  logo.style.backgroundColor = "#f7aea8";
-  menu.style.backgroundColor = "#f7aea8";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -167,6 +160,7 @@ item2.addEventListener("click", () => {
 
 item3.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(2)";
   item3.style.transition = "all 0.25s ease";
   item3.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
@@ -174,6 +168,7 @@ item3.addEventListener("mouseenter", () => {
 
 item3.addEventListener("mouseleave", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
   item3.style.transition = "all 0.25s ease";
   item3.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
@@ -186,11 +181,7 @@ item3.addEventListener("mouseleave", () => {
 item3.addEventListener("click", () => {
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  logo.style.transition = "all 0.5s ease";
   items.style.transition = "all 0.5s ease";
-  logo.style.background = "#f7aea8";
-  logo.style.backgroundColor = "#f7aea8";
-  menu.style.backgroundColor = "#f7aea8";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";
@@ -202,6 +193,7 @@ item3.addEventListener("click", () => {
 
 item4.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(2)";
   item4.style.transition = "all 0.25s ease";
   item4.style.color = "#f4f4f4";
   logo.style.backgroundColor = "#f4f4f4";
@@ -209,6 +201,7 @@ item4.addEventListener("mouseenter", () => {
 
 item4.addEventListener("mouseleave", () => {
   logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
   item4.style.transition = "all 0.25s ease";
   item4.style.color = "#1a1a1a";
   if (menu.classList.contains("open")) {
@@ -221,11 +214,7 @@ item4.addEventListener("mouseleave", () => {
 item4.addEventListener("click", () => {
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
-  logo.style.transition = "all 0.5s ease";
   items.style.transition = "all 0.5s ease";
-  logo.style.background = "#f7aea8";
-  logo.style.backgroundColor = "#f7aea8";
-  menu.style.backgroundColor = "#f7aea8";
   items.style.color = "transparent";
   items.style.opacity = "0";
   items.style.cursor = "default";

@@ -30,6 +30,7 @@ h1 {
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
+  z-index: 1;
 }
 
 p {
@@ -91,17 +92,13 @@ button {
 
 .items {
   position: fixed;
-  /*display: flex;
-  flex-direction: column;*/
-  left: 40px;
-  top: 50%;
-  transform: translate(40px, -50%);
   left: 20px;
+  top: 50%;
+  transform: translate(20px, -50%);
   color: transparent;
   z-index: 2;
   cursor: default;
   pointer-events: none;
-  opacity: 1;
 }
 
 .item {
@@ -125,13 +122,9 @@ button {
 }
 
 .title {
-  grid-column: 2/3;
-  justify-self: left;
-  align-self: start;
-}
-
-.title-1 {
   font-family: Alegraya;
+  grid-column: 2/3;
+  align-self: start;
 }
 
 .profile-bw {
@@ -139,7 +132,6 @@ button {
   border-radius: 30px;
   grid-column: 3/4;
   grid-row: 2/3;
-  justify-self: right;
   transform-style: preserve-3d;
   opacity: 0;
   transition: opacity 0.25s;
@@ -150,7 +142,6 @@ button {
   border-radius: 30px;
   grid-column: 3/4;
   grid-row: 2/3;
-  justify-self: right;
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -163,7 +154,6 @@ button {
   font-size: 48px;
   grid-column: 2/4;
   grid-row: 3/4;
-  justify-self: center;
   align-self: end;
   opacity: 0;
   transition: opacity 1.5s;
@@ -210,7 +200,6 @@ button {
 }
 
 .link {
-  text-decoration: none;
   color: inherit;
   cursor: pointer;
   border-radius: 30px;
@@ -229,7 +218,7 @@ button {
 }
 
 .img {
-  opacity: 0.85;
+  opacity: 0.9;
   position: absolute;
   border-radius: 30px;
 }
@@ -337,7 +326,6 @@ button {
 }
 
 .e-mail {
-  text-decoration: none;
   font-family: Astloch;
   color: #f4f4f4;
   cursor: pointer;
