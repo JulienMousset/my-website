@@ -6,22 +6,22 @@
 
 @font-face {
   font-family: Alegraya;
-  src: url("./ressources/fonts/Alegreya/Alegreya-Regular.ttf");
+  src: url("../ressources/fonts/Alegreya/Alegreya-Regular.ttf");
 }
 
 @font-face {
   font-family: Astloch;
-  src: url("./ressources/fonts/Astloch/Astloch-Bold.ttf");
+  src: url("../ressources/fonts/Astloch/Astloch-Bold.ttf");
 }
 
 @font-face {
   font-family: Roboto;
-  src: url("./ressources/fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../ressources/fonts/Roboto/Roboto-Regular.ttf");
 }
 
 @font-face {
   font-family: Roboto-Bold;
-  src: url("./ressources/fonts/Roboto/Roboto-Bold.ttf");
+  src: url("../ressources/fonts/Roboto/Roboto-Bold.ttf");
 }
 
 h1 {
