@@ -44,6 +44,42 @@
   }
 }
 
+@keyframes circle-1 {
+  from {
+    transform: rotate(0deg) translate(-40px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-40px) rotate(-360deg);
+  }
+}
+
+@keyframes circle-2 {
+  from {
+    transform: rotate(360deg) translate(-60px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-60px) rotate(0deg);
+  }
+}
+
+@keyframes circle-3 {
+  from {
+    transform: rotate(360deg) translate(-30px) rotate(-360deg);
+  }
+  to {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+}
+
+@keyframes circle-4 {
+  from {
+    transform: rotate(0deg) translate(-20px) rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg) translate(-20px) rotate(360deg);
+  }
+}
+
 h1 {
   font-family: Astloch;
   font-size: 120px;
@@ -208,7 +244,7 @@ button {
 }
 
 .boom {
-  height: 80%;
+  height: 40vh;
   grid-column: 1/2;
   grid-row: 4/5;
   justify-self: center;
@@ -216,7 +252,7 @@ button {
 }
 
 .antic {
-  height: 80%;
+  height: 40vh;
   grid-column: 3/4;
   grid-row: 4/5;
   justify-self: center;
@@ -247,81 +283,45 @@ button {
 }
 
 .img-1 {
-  height: 22%;
+  height: 28vh;
   top: 30vh;
   right: 30vh;
   animation: circle-1 20s linear infinite;
 }
 
 .img-2 {
-  height: 20%;
+  height: 25vh;
   top: 105vh;
   left: 30vh;
   animation: circle-2 20s linear infinite;
 }
 
 .img-3 {
-  height: 26%;
+  height: 33vh;
   top: 70vh;
   right: 10vh;
   animation: circle-3 20s linear infinite;
 }
 
 .img-4 {
-  height: 28%;
+  height: 35vh;
   top: 30vh;
   left: 65vh;
   animation: circle-4 15s linear infinite;
 }
 
 .img-5 {
-  height: 30%;
+  height: 38vh;
   top: 60vh;
   left: 25vh;
   animation: circle-1 15s linear infinite;
 }
 
 .img-6 {
-  height: 28%;
+  height: 35vh;
   top: 100vh;
   right: 60vh;
   animation: circle-1 15s linear infinite;
-}
-
-@keyframes circle-1 {
-  from {
-    transform: rotate(0deg) translate(-40px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translate(-40px) rotate(-360deg);
-  }
-}
-
-@keyframes circle-2 {
-  from {
-    transform: rotate(360deg) translate(-60px) rotate(-360deg);
-  }
-  to {
-    transform: rotate(0deg) translate(-60px) rotate(0deg);
-  }
-}
-
-@keyframes circle-3 {
-  from {
-    transform: rotate(360deg) translate(-30px) rotate(-360deg);
-  }
-  to {
-    transform: rotate(0deg) translate(-30px) rotate(0deg);
-  }
-}
-
-@keyframes circle-4 {
-  from {
-    transform: rotate(0deg) translate(-20px) rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg) translate(-20px) rotate(360deg);
-  }
 }
 
 .page-4 {
@@ -335,6 +335,7 @@ button {
 }
 
 .handshake {
+  height: 40vh;
   transform: rotate(-30deg);
   grid-column: 1/2;
   grid-row: 3/4;
@@ -342,6 +343,7 @@ button {
 }
 
 .letter {
+  height: 40vh;
   transform: rotate(15deg);
   grid-column: 3/4;
   grid-row: 5/6;
@@ -386,4 +388,158 @@ button {
 
 .scroll-opacity {
   opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 100px;
+  }
+
+  p {
+    font-size: 36px;
+  }
+
+  .item {
+    font-size: 120px;
+  }
+
+  .page-1 {
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+  }
+
+  .stars {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .profile-bw {
+    height: 480px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+
+  .profile-color {
+    height: 480px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+
+  .intro {
+    font-size: 36px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .boom {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .antic {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .letter {
+    height: 0%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+  button {
+    border: 3.75px solid #f4f4f4;
+    width: 127.5px;
+    height: 45px;
+    font-size: 15px;
+    align-self: center;
+  }
+
+  .items {
+    left: 10px;
+  }
+
+  .item {
+    font-size: 60px;
+  }
+
+  .page-1 {
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+  }
+
+  .stars {
+    display: none;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .profile-bw {
+    height: 360px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+
+  .profile-color {
+    height: 360px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+  }
+
+  .intro {
+    font-size: 24px;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .boom {
+    height: 10vh;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .antic {
+    height: 10vh;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .handshake {
+    height: 10vh;
+  }
+
+  .letter {
+    height: 10vh;
+  }
+
+  .social-links img {
+    padding: 0px 10px;
+    width: 44px;
+  }
 }

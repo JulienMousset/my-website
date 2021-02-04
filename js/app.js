@@ -257,6 +257,7 @@ function mousePos(e) {
   prevX = e.pageX;
   prevY = e.pageY;
 }
+
 function moveImg(xAmount, yAmount) {
   imgArr.forEach(function (img) {
     let movementStrength = 5 + Math.random() * 20;
