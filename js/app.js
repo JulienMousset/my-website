@@ -403,35 +403,6 @@ link.addEventListener("touchend", () => {
   link.style.color = "#f4f4f4";
 });
 
-let imgArr = document.querySelectorAll(".img");
-let prevX = 0;
-let prevY = 0;
-let moveXAmount = 0;
-let moveYAmount = 0;
-
-document.addEventListener("mousemove", (e) => {
-  mousePos(e);
-});
-
-function mousePos(e) {
-  moveXAmount = e.pageX - prevX;
-  moveYAmount = e.pageY - prevY;
-
-  moveImg(moveXAmount, moveYAmount);
-
-  prevX = e.pageX;
-  prevY = e.pageY;
-}
-
-function moveImg(xAmount, yAmount) {
-  imgArr.forEach(function (img) {
-    let movementStrength = 5 + Math.random() * 20;
-
-    img.style.left = img.offsetLeft - xAmount / movementStrength + "px";
-    img.style.top = img.offsetTop - yAmount / movementStrength + "px";
-  });
-}
-
 email.addEventListener("mouseenter", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#f4f4f4";

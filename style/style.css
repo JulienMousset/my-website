@@ -271,54 +271,6 @@ button {
   grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
 }
 
-.img {
-  border-radius: 30px;
-  position: absolute;
-  opacity: 0.9;
-}
-
-.img-1 {
-  height: 28vh;
-  top: 30vh;
-  right: 30vh;
-  animation: circle-1 20s linear infinite;
-}
-
-.img-2 {
-  height: 25vh;
-  top: 105vh;
-  left: 30vh;
-  animation: circle-2 20s linear infinite;
-}
-
-.img-3 {
-  height: 33vh;
-  top: 70vh;
-  right: 10vh;
-  animation: circle-3 20s linear infinite;
-}
-
-.img-4 {
-  height: 35vh;
-  top: 30vh;
-  left: 65vh;
-  animation: circle-4 15s linear infinite;
-}
-
-.img-5 {
-  height: 38vh;
-  top: 60vh;
-  left: 25vh;
-  animation: circle-1 15s linear infinite;
-}
-
-.img-6 {
-  height: 35vh;
-  top: 100vh;
-  right: 60vh;
-  animation: circle-1 15s linear infinite;
-}
-
 .page-4 {
   height: 150vh;
   background-color: #1a1a1a;
@@ -458,10 +410,6 @@ button {
     align-self: center;
   }
 
-  .img {
-    display: none;
-  }
-
   .handshake img {
     height: 15vh;
   }
@@ -535,10 +483,6 @@ button {
 
   .antic {
     height: 10vh;
-  }
-
-  .img {
-    display: none;
   }
 
   .handshake img {
@@ -619,10 +563,6 @@ button {
 
   .antic {
     height: 10vh;
-  }
-
-  .img {
-    display: none;
   }
 
   .handshake img {
@@ -765,10 +705,6 @@ button {
     height: 20vh;
   }
 
-  .img {
-    display: none;
-  }
-
   .handshake img {
     height: 20vh;
   }
@@ -782,13 +718,3 @@ button {
     width: 24px;
   }
 }
-
-/*.link {
-  border-radius: 30px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #1a1a1a;
-  color: inherit;
-  cursor: pointer;
-}
-*/
