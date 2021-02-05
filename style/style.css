@@ -214,10 +214,6 @@ button {
   animation: fade 3s ease-in-out;
 }
 
-.profile-bw:hover {
-  opacity: 0;
-}
-
 .intro {
   font-size: 48px;
   grid-column: 2/4;
@@ -261,10 +257,8 @@ button {
 
 .link {
   border-radius: 30px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #1a1a1a;
-  color: inherit;
+  background-color: #1a1a1a;
+  color: #f4f4f4;
   cursor: pointer;
 }
 
@@ -788,3 +782,13 @@ button {
     width: 24px;
   }
 }
+
+/*.link {
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
+}
+*/

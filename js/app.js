@@ -36,7 +36,40 @@ logo.addEventListener("mouseleave", () => {
   logo.style.transform = "scale(1)";
 });
 
+logo.addEventListener("touchend", () => {
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+});
+
 logo.addEventListener("click", () => {
+  if (menu.classList.contains("open")) {
+    logo.style.transition = "all 0.5s ease";
+    menu.style.transition = "all 0.5s ease";
+    items.style.transition = "all 0.5s ease";
+    menu.style.transform = "scale(1)";
+    logo.style.backgroundColor = "#f7aea8";
+    items.style.color = "transparent";
+    items.style.opacity = "0";
+    items.style.cursor = "default";
+    items.style.pointerEvents = "none";
+    menu.classList.remove("open");
+    scroller.start();
+  } else {
+    logo.style.transition = "all 0.75s ease";
+    menu.style.transition = "all 0.75s ease";
+    items.style.transition = "all 1s ease";
+    menu.style.transform = "scale(1000)";
+    logo.style.backgroundColor = "#1a1a1a";
+    items.style.color = "#1a1a1a";
+    items.style.opacity = "1";
+    items.style.cursor = "pointer";
+    items.style.pointerEvents = "all";
+    menu.classList.add("open");
+    scroller.stop();
+  }
+});
+
+logo.addEventListener("touchcancel", () => {
   if (menu.classList.contains("open")) {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
@@ -84,7 +117,28 @@ item1.addEventListener("mouseleave", () => {
   }
 });
 
+item1.addEventListener("touchend", () => {
+  item1.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item1.style.color = "#1a1a1a";
+  logo.style.backgroundColor = "#f7aea8";
+});
+
 item1.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page1);
+});
+
+item1.addEventListener("touchcancel", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -117,7 +171,28 @@ item2.addEventListener("mouseleave", () => {
   }
 });
 
+item2.addEventListener("touchend", () => {
+  item2.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item2.style.color = "#1a1a1a";
+  logo.style.backgroundColor = "#f7aea8";
+});
+
 item2.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page2, { offset: "200" });
+});
+
+item2.addEventListener("touchcancel", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -150,7 +225,28 @@ item3.addEventListener("mouseleave", () => {
   }
 });
 
+item3.addEventListener("touchend", () => {
+  item3.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item3.style.color = "#1a1a1a";
+  logo.style.backgroundColor = "#f7aea8";
+});
+
 item3.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page3, { offset: "200" });
+});
+
+item3.addEventListener("touchcancel", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -171,6 +267,14 @@ item4.addEventListener("mouseenter", () => {
   item4.style.color = "#f4f4f4";
 });
 
+item4.addEventListener("touchstart", () => {
+  item4.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(2)";
+  logo.style.backgroundColor = "#f4f4f4";
+  item4.style.color = "#f4f4f4";
+});
+
 item4.addEventListener("mouseleave", () => {
   item4.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
@@ -183,7 +287,28 @@ item4.addEventListener("mouseleave", () => {
   }
 });
 
+item4.addEventListener("touchend", () => {
+  item4.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item4.style.color = "#1a1a1a";
+  logo.style.backgroundColor = "#f7aea8";
+});
+
 item4.addEventListener("click", () => {
+  items.style.transition = "all 0.5s ease";
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  menu.classList.remove("open");
+  scroller.start();
+  scroller.scrollTo(page4, { offset: "200" });
+});
+
+item4.addEventListener("touchcancel", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -216,7 +341,31 @@ const scope = blotter.forText(text);
 
 scope.appendTo(title);
 
+container.addEventListener("mouseenter", () => {
+  container.style.transition = "all 0.25s ease";
+  container.style.opacity = "0";
+});
+
+container.addEventListener("touchstart", () => {
+  container.style.transition = "all 0.25s ease";
+  container.style.opacity = "0";
+});
+
+container.addEventListener("mouseleave", () => {
+  container.style.opacity = "1";
+});
+
+container.addEventListener("touchend", () => {
+  container.style.opacity = "1";
+});
+
 container.addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+
+container.addEventListener("touchmove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
@@ -226,16 +375,32 @@ container.addEventListener("mouseleave", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
+container.addEventListener("touchend", () => {
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+});
+
 link.addEventListener("mouseenter", () => {
+  link.style.transition = "all 0.25s ease";
+  link.style.backgroundColor = "#f4f4f4";
+  link.style.color = "#1a1a1a";
+});
+
+link.addEventListener("touchstart", () => {
+  link.style.transition = "all 0.25s ease";
+  link.style.backgroundColor = "#f4f4f4";
+  link.style.color = "#1a1a1a";
+});
+
+link.addEventListener("mouseleave", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#1a1a1a";
   link.style.color = "#f4f4f4";
 });
 
-link.addEventListener("mouseleave", () => {
+link.addEventListener("touchend", () => {
   link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#f4f4f4";
-  link.style.color = "#1a1a1a";
+  link.style.backgroundColor = "#1a1a1a";
+  link.style.color = "#f4f4f4";
 });
 
 let imgArr = document.querySelectorAll(".img");
@@ -273,13 +438,32 @@ email.addEventListener("mouseenter", () => {
   email.style.color = "#1a1a1a";
 });
 
+email.addEventListener("touchstart", () => {
+  email.style.transition = "all 0.25s ease";
+  email.style.backgroundColor = "#f4f4f4";
+  email.style.color = "#1a1a1a";
+});
+
 email.addEventListener("mouseleave", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#1a1a1a";
   email.style.color = "#f4f4f4";
 });
 
+email.addEventListener("touchend", () => {
+  email.style.transition = "all 0.25s ease";
+  email.style.backgroundColor = "#1a1a1a";
+  email.style.color = "#f4f4f4";
+});
+
 button.addEventListener("mouseenter", () => {
+  button.style.transition = "all 0.25s ease";
+  button.style.border = "5px solid #1a1a1a";
+  button.style.backgroundColor = "#f4f4f4";
+  button.style.color = "#1a1a1a";
+});
+
+button.addEventListener("touchstart", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #1a1a1a";
   button.style.backgroundColor = "#f4f4f4";
@@ -293,7 +477,22 @@ button.addEventListener("mouseleave", () => {
   button.style.color = "#f4f4f4";
 });
 
+button.addEventListener("touchend", () => {
+  button.style.transition = "all 0.25s ease";
+  button.style.border = "5px solid #f4f4f4";
+  button.style.backgroundColor = "#1a1a1a";
+  button.style.color = "#f4f4f4";
+});
+
 button.addEventListener("click", () => {
+  cv.style.transition = "all 0.75s ease";
+  cv.style.width = "100%";
+  cv.style.transform = "translate(0%)";
+  cv.style.opacity = 1;
+  scroller.scrollTo(page4);
+});
+
+button.addEventListener("touchcancel", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "100%";
   cv.style.transform = "translate(0%)";
@@ -316,7 +515,20 @@ cv.addEventListener("click", () => {
   scroller.scrollTo("bottom");
 });
 
+cv.addEventListener("touchcancel", () => {
+  cv.style.transition = "all 0.75s ease";
+  cv.style.width = "0%";
+  cv.style.transform = "translate(-250%)";
+  cv.style.opacity = 0;
+  scroller.scrollTo("bottom");
+});
+
 github.addEventListener("mouseenter", () => {
+  github.style.transition = "all 0.25s ease";
+  github.style.transform = "scale(2)";
+});
+
+github.addEventListener("touchstart", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
 });
@@ -326,7 +538,17 @@ github.addEventListener("mouseleave", () => {
   github.style.transform = "scale(1)";
 });
 
+github.addEventListener("touchend", () => {
+  github.style.transition = "all 0.25s ease";
+  github.style.transform = "scale(1)";
+});
+
 bandcamp.addEventListener("mouseenter", () => {
+  bandcamp.style.transition = "all 0.25s ease";
+  bandcamp.style.transform = "scale(2)";
+});
+
+bandcamp.addEventListener("touchstart", () => {
   bandcamp.style.transition = "all 0.25s ease";
   bandcamp.style.transform = "scale(2)";
 });
@@ -336,7 +558,17 @@ bandcamp.addEventListener("mouseleave", () => {
   bandcamp.style.transform = "scale(1)";
 });
 
+bandcamp.addEventListener("touchend", () => {
+  bandcamp.style.transition = "all 0.25s ease";
+  bandcamp.style.transform = "scale(1)";
+});
+
 linkedin.addEventListener("mouseenter", () => {
+  linkedin.style.transition = "all 0.25s ease";
+  linkedin.style.transform = "scale(2)";
+});
+
+linkedin.addEventListener("touchstart", () => {
   linkedin.style.transition = "all 0.25s ease";
   linkedin.style.transform = "scale(2)";
 });
@@ -346,12 +578,27 @@ linkedin.addEventListener("mouseleave", () => {
   linkedin.style.transform = "scale(1)";
 });
 
+linkedin.addEventListener("touchend", () => {
+  linkedin.style.transition = "all 0.25s ease";
+  linkedin.style.transform = "scale(1)";
+});
+
 mail.addEventListener("mouseenter", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(2)";
 });
 
+mail.addEventListener("touchstart", () => {
+  mail.style.transition = "all 0.25s ease";
+  mail.style.transform = "scale(2)";
+});
+
 mail.addEventListener("mouseleave", () => {
+  mail.style.transition = "all 0.25s ease";
+  mail.style.transform = "scale(1)";
+});
+
+mail.addEventListener("touchend", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(1)";
 });
