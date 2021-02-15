@@ -42,7 +42,7 @@ logo.addEventListener("mouseleave", () => {
   logo.style.transform = "scale(1)";
 });
 
-logo.addEventListener("touchcancel", () => {
+logo.addEventListener("touchend", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
 });
@@ -123,7 +123,7 @@ item1.addEventListener("mouseleave", () => {
   }
 });
 
-item1.addEventListener("touchcancel", () => {
+item1.addEventListener("touchend", () => {
   item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
@@ -144,7 +144,7 @@ item1.addEventListener("click", () => {
   scroller.scrollTo(page1);
 });
 
-item1.addEventListener("touchcancel", () => {
+item1.addEventListener("touchcend", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
