@@ -123,7 +123,7 @@ item1.addEventListener("mouseleave", () => {
   }
 });
 
-item1.addEventListener("touchend", () => {
+item1.addEventListener("touchcancel", () => {
   item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
