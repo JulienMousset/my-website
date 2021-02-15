@@ -129,6 +129,8 @@ item1.addEventListener("touchend", () => {
   logo.style.transform = "scale(1)";
   item1.style.color = "#1a1a1a";
   logo.style.backgroundColor = "#f7aea8";
+  logo.style.backgroundColor = "#f4f4f4";
+  item1.style.color = "#f4f4f4";
 });
 
 item1.addEventListener("click", () => {
