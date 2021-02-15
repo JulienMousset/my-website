@@ -386,18 +386,6 @@ container.addEventListener("touchend", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
-link.addEventListener("touchstart", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#f4f4f4";
-  link.style.color = "#1a1a1a";
-});
-
-link.addEventListener("touchcancel", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#1a1a1a";
-  link.style.color = "#f4f4f4";
-});
-
 link.addEventListener("mouseenter", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#f4f4f4";
