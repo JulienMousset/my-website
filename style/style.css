@@ -80,12 +80,9 @@
   }
 }
 
-html {
-  height: 100vh;
-}
-
 main {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 h1 {
