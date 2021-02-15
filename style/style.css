@@ -80,14 +80,23 @@
   }
 }
 
-html,
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
 body {
+  overflow: auto;
+  height: 100%;
+}
+
+/*html {
   overscroll-behavior: none;
 }
 
 main {
   overflow: hidden;
-}
+}*/
 
 h1 {
   font-family: Astloch;
