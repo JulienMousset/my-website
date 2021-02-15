@@ -80,7 +80,8 @@
   }
 }
 
-html {
+html,
+body {
   overscroll-behavior: none;
 }
 
