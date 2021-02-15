@@ -129,8 +129,6 @@ item1.addEventListener("touchend", () => {
   logo.style.transform = "scale(1)";
   item1.style.color = "#1a1a1a";
   logo.style.backgroundColor = "#f7aea8";
-  logo.style.backgroundColor = "#f4f4f4";
-  item1.style.color = "#f4f4f4";
 });
 
 item1.addEventListener("click", () => {
@@ -146,7 +144,8 @@ item1.addEventListener("click", () => {
   scroller.scrollTo(page1);
 });
 
-item1.addEventListener("touchend", () => {
+item1.addEventListener("touchcancel", () => {
+  console.log("hello");
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
