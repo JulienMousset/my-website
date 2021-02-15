@@ -437,6 +437,18 @@ button {
     align-self: center;
   }
 
+  .shooting-star {
+    height: 20vh;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .games {
+    height: 20vh;
+    justify-self: center;
+    align-self: center;
+  }
+
   .handshake img {
     height: 15vh;
   }
@@ -509,6 +521,14 @@ button {
   }
 
   .antic {
+    height: 10vh;
+  }
+
+  .shooting-star {
+    height: 10vh;
+  }
+
+  .games {
     height: 10vh;
   }
 
@@ -592,6 +612,14 @@ button {
     height: 10vh;
   }
 
+  .shooting-star {
+    height: 10vh;
+  }
+
+  .games {
+    height: 10vh;
+  }
+
   .handshake img {
     height: 10vh;
   }
@@ -646,6 +674,14 @@ button {
   }
 
   .antic {
+    height: 40vh;
+  }
+
+  .shooting-star {
+    height: 40vh;
+  }
+
+  .games {
     height: 40vh;
   }
 
@@ -729,6 +765,14 @@ button {
   }
 
   .antic {
+    height: 20vh;
+  }
+
+  .shooting-star {
+    height: 20vh;
+  }
+
+  .games {
     height: 20vh;
   }
 
