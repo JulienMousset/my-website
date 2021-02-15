@@ -80,6 +80,10 @@
   }
 }
 
+body {
+  overflow: hidden;
+}
+
 h1 {
   font-family: Astloch;
   font-size: 120px;
