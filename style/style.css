@@ -84,8 +84,12 @@ html {
   overscroll-behavior: none;
 }
 
-body {
+.portoflio {
+  overscroll-behavior: none;
   overflow: hidden;
+}
+
+body {
   overscroll-behavior: none;
 }
 
