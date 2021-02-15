@@ -81,20 +81,21 @@
 }
 
 html {
-  overflow: auto;
   overscroll-behavior: none;
 }
 
 body {
-  overflow: auto;
+  overscroll-behavior: none;
 }
 
 header {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 main {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 h1 {
