@@ -80,25 +80,10 @@
   }
 }
 
-.portoflio {
-  overflow: hidden;
-}
-
-/*
-body {
-  overscroll-behavior: none;
-  overflow: hidden;
-}
-
-header {
-  overflow: hidden;
-  overscroll-behavior: none;
-}
-
 main {
   overflow: hidden;
-  overscroll-behavior: none;
-}*/
+  /*overscroll-behavior: none;*/
+}
 
 h1 {
   font-family: Astloch;
