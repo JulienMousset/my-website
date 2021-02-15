@@ -81,7 +81,13 @@
 }
 
 html {
+  overflow: auto;
   overscroll-behavior: none;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
 }
 
 header {
