@@ -80,15 +80,11 @@
   }
 }
 
-html {
-  overscroll-behavior: none;
-}
-
-/*.portoflio {
-  overscroll-behavior: none;
+.portoflio {
   overflow: hidden;
 }
 
+/*
 body {
   overscroll-behavior: none;
   overflow: hidden;
