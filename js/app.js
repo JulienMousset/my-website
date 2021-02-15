@@ -372,11 +372,11 @@ container.addEventListener("mousemove", (e) => {
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
-/*container.addEventListener("touchmove", (e) => {
+container.addEventListener("touchmove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-});*/
+});
 
 container.addEventListener("mouseleave", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -392,11 +392,11 @@ link.addEventListener("mouseenter", () => {
   link.style.color = "#1a1a1a";
 });
 
-/*link.addEventListener("touchstart", () => {
+link.addEventListener("touchstart", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#f4f4f4";
   link.style.color = "#1a1a1a";
-});*/
+});
 
 link.addEventListener("mouseleave", () => {
   link.style.transition = "all 0.25s ease";
@@ -404,11 +404,11 @@ link.addEventListener("mouseleave", () => {
   link.style.color = "#f4f4f4";
 });
 
-/*link.addEventListener("touchend", () => {
+link.addEventListener("touchend", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#1a1a1a";
   link.style.color = "#f4f4f4";
-});*/
+});
 
 email.addEventListener("mouseenter", () => {
   email.style.transition = "all 0.25s ease";
