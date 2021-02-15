@@ -144,7 +144,7 @@ item1.addEventListener("click", () => {
   scroller.scrollTo(page1);
 });
 
-item1.addEventListener("touchcend", () => {
+item1.addEventListener("touchend", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
