@@ -428,7 +428,7 @@ email.addEventListener("mouseleave", () => {
   email.style.color = "#f4f4f4";
 });
 
-email.addEventListener("touchend", () => {
+email.addEventListener("touchcancel", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#1a1a1a";
   email.style.color = "#f4f4f4";
