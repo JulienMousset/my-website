@@ -392,19 +392,7 @@ link.addEventListener("mouseenter", () => {
   link.style.color = "#1a1a1a";
 });
 
-link.addEventListener("touchstart", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#f4f4f4";
-  link.style.color = "#1a1a1a";
-});
-
 link.addEventListener("mouseleave", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#1a1a1a";
-  link.style.color = "#f4f4f4";
-});
-
-link.addEventListener("touchend", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#1a1a1a";
   link.style.color = "#f4f4f4";
@@ -416,19 +404,7 @@ email.addEventListener("mouseenter", () => {
   email.style.color = "#1a1a1a";
 });
 
-email.addEventListener("touchstart", () => {
-  email.style.transition = "all 0.25s ease";
-  email.style.backgroundColor = "#f4f4f4";
-  email.style.color = "#1a1a1a";
-});
-
 email.addEventListener("mouseleave", () => {
-  email.style.transition = "all 0.25s ease";
-  email.style.backgroundColor = "#1a1a1a";
-  email.style.color = "#f4f4f4";
-});
-
-email.addEventListener("touchcancel", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#1a1a1a";
   email.style.color = "#f4f4f4";
@@ -516,17 +492,7 @@ bandcamp.addEventListener("mouseenter", () => {
   bandcamp.style.transform = "scale(2)";
 });
 
-bandcamp.addEventListener("touchstart", () => {
-  bandcamp.style.transition = "all 0.25s ease";
-  bandcamp.style.transform = "scale(2)";
-});
-
 bandcamp.addEventListener("mouseleave", () => {
-  bandcamp.style.transition = "all 0.25s ease";
-  bandcamp.style.transform = "scale(1)";
-});
-
-bandcamp.addEventListener("touchend", () => {
   bandcamp.style.transition = "all 0.25s ease";
   bandcamp.style.transform = "scale(1)";
 });
@@ -536,17 +502,7 @@ linkedin.addEventListener("mouseenter", () => {
   linkedin.style.transform = "scale(2)";
 });
 
-linkedin.addEventListener("touchstart", () => {
-  linkedin.style.transition = "all 0.25s ease";
-  linkedin.style.transform = "scale(2)";
-});
-
 linkedin.addEventListener("mouseleave", () => {
-  linkedin.style.transition = "all 0.25s ease";
-  linkedin.style.transform = "scale(1)";
-});
-
-linkedin.addEventListener("touchend", () => {
   linkedin.style.transition = "all 0.25s ease";
   linkedin.style.transform = "scale(1)";
 });
@@ -556,17 +512,7 @@ mail.addEventListener("mouseenter", () => {
   mail.style.transform = "scale(2)";
 });
 
-mail.addEventListener("touchstart", () => {
-  mail.style.transition = "all 0.25s ease";
-  mail.style.transform = "scale(2)";
-});
-
 mail.addEventListener("mouseleave", () => {
-  mail.style.transition = "all 0.25s ease";
-  mail.style.transform = "scale(1)";
-});
-
-mail.addEventListener("touchend", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(1)";
 });
