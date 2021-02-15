@@ -501,26 +501,14 @@ cv.addEventListener("touchcancel", () => {
   scroller.scrollTo("bottom");
 });
 
-github.addEventListener("touchstart", () => {
+github.addEventListener("mouseenter", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
-  preventDefault();
-});
-
-github.addEventListener("touchend", () => {
-  github.style.transition = "all 0.25s ease";
-  github.style.transform = "scale(1)";
-  preventDefault();
 });
 
 github.addEventListener("mouseleave", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
-});
-
-github.addEventListener("mouseenter", () => {
-  github.style.transition = "all 0.25s ease";
-  github.style.transform = "scale(2)";
 });
 
 bandcamp.addEventListener("mouseenter", () => {
