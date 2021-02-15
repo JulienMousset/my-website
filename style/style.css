@@ -84,7 +84,7 @@
 
 html {
   overscroll-behavior: none;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .portoflio {
