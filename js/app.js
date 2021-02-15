@@ -506,20 +506,20 @@ github.addEventListener("mouseenter", () => {
   github.style.transform = "scale(2)";
 });
 
-github.addEventListener("touchstart", () => {
+/*github.addEventListener("touchstart", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
-});
+});*/
 
 github.addEventListener("mouseleave", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
 });
 
-github.addEventListener("touchend", () => {
+/*github.addEventListener("touchend", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
-});
+});*/
 
 bandcamp.addEventListener("mouseenter", () => {
   bandcamp.style.transition = "all 0.25s ease";
