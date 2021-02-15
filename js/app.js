@@ -386,17 +386,31 @@ container.addEventListener("touchend", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
+link.addEventListener("touchstart", () => {
+  link.style.transition = "all 0.25s ease";
+  link.style.backgroundColor = "#f4f4f4";
+  link.style.color = "#1a1a1a";
+  preventDefault();
+});
+
+link.addEventListener("touchend", () => {
+  link.style.transition = "all 0.25s ease";
+  link.style.backgroundColor = "#1a1a1a";
+  link.style.color = "#f4f4f4";
+  preventDefault();
+});
+
 link.addEventListener("mouseenter", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#f4f4f4";
   link.style.color = "#1a1a1a";
 });
 
-link.addEventListener("touchstart", () => {
+/*link.addEventListener("touchstart", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#f4f4f4";
   link.style.color = "#1a1a1a";
-});
+});*/
 
 link.addEventListener("mouseleave", () => {
   link.style.transition = "all 0.25s ease";
@@ -404,11 +418,11 @@ link.addEventListener("mouseleave", () => {
   link.style.color = "#f4f4f4";
 });
 
-link.addEventListener("touchend", () => {
+/*link.addEventListener("touchend", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#1a1a1a";
   link.style.color = "#f4f4f4";
-});
+});*/
 
 email.addEventListener("mouseenter", () => {
   email.style.transition = "all 0.25s ease";
