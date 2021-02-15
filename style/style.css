@@ -1,6 +1,4 @@
-*,
-::before,
-::after {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -82,7 +80,7 @@
   }
 }
 
-html {
+/*html {
   overscroll-behavior: none;
   overflow: auto;
 }
@@ -105,7 +103,7 @@ header {
 main {
   overflow: hidden;
   overscroll-behavior: none;
-}
+}*/
 
 h1 {
   font-family: Astloch;
