@@ -393,7 +393,7 @@ link.addEventListener("touchstart", () => {
   preventDefault();
 });
 
-link.addEventListener("touchend", () => {
+link.addEventListener("touchcancel", () => {
   link.style.transition = "all 0.25s ease";
   link.style.backgroundColor = "#1a1a1a";
   link.style.color = "#f4f4f4";
