@@ -80,6 +80,11 @@
   }
 }
 
+html {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 /*main {
   overflow: hidden;
 }*/
