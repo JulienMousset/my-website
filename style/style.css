@@ -80,7 +80,11 @@
   }
 }
 
-.portfolio {
+html {
+  height: 100vh;
+}
+
+main {
   overflow: hidden;
 }
 
