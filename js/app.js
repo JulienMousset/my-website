@@ -69,7 +69,7 @@ logo.addEventListener("click", () => {
   }
 });
 
-logo.addEventListener("touchcancel", () => {
+logo.addEventListener("touchend", () => {
   if (menu.classList.contains("open")) {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
