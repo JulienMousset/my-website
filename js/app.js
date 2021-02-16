@@ -117,13 +117,13 @@ item1.addEventListener("mouseleave", () => {
   }
 });
 
-/*item1.addEventListener("touchend", () => {
+item1.addEventListener("touchend", () => {
   item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
   item1.style.color = "#1a1a1a";
   logo.style.backgroundColor = "#f7aea8";
-});*/
+});
 
 item1.addEventListener("click", () => {
   items.style.transition = "all 0.5s ease";
@@ -193,7 +193,7 @@ item2.addEventListener("click", () => {
   scroller.scrollTo(page2, { offset: "200" });
 });
 
-item2.addEventListener("touchcancel", () => {
+item2.addEventListener("touchend", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -247,7 +247,7 @@ item3.addEventListener("click", () => {
   scroller.scrollTo(page3, { offset: "200" });
 });
 
-item3.addEventListener("touchcancel", () => {
+item3.addEventListener("touchend", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
@@ -309,7 +309,7 @@ item4.addEventListener("click", () => {
   scroller.scrollTo(page4, { offset: "200" });
 });
 
-item4.addEventListener("touchcancel", () => {
+item4.addEventListener("touchend", () => {
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
   menu.style.transform = "scale(1)";
