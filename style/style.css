@@ -85,7 +85,7 @@ main {
   overscroll-behavior: none;
 }
 
-.portfolio {
+body {
   overflow-x: hidden;
 }
 
