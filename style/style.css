@@ -85,6 +85,10 @@ main {
   overscroll-behavior: none;
 }
 
+.portfolio {
+  overflow-x: hidden;
+}
+
 h1 {
   font-family: Astloch;
   font-size: 120px;
