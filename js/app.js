@@ -35,11 +35,6 @@ logo.addEventListener("mouseleave", () => {
   logo.style.transform = "scale(1)";
 });
 
-logo.addEventListener("touchend", () => {
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-});
-
 logo.addEventListener("click", () => {
   if (menu.classList.contains("open")) {
     logo.style.transition = "all 0.5s ease";
@@ -67,34 +62,7 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "all";
     menu.classList.add("open");
     scroller.stop();
-  }
-});
-
-logo.addEventListener("touchcancel", () => {
-  if (menu.classList.contains("open")) {
-    logo.style.transition = "all 0.5s ease";
-    menu.style.transition = "all 0.5s ease";
-    items.style.transition = "all 0.5s ease";
-    menu.style.transform = "scale(1)";
-    logo.style.backgroundColor = "#f7aea8";
-    items.style.color = "transparent";
-    items.style.opacity = "0";
-    items.style.cursor = "default";
-    items.style.pointerEvents = "none";
-    menu.classList.remove("open");
-    scroller.start();
-  } else {
-    logo.style.transition = "all 0.75s ease";
-    menu.style.transition = "all 0.75s ease";
-    items.style.transition = "all 1s ease";
-    menu.style.transform = "scale(1000)";
-    logo.style.backgroundColor = "#1a1a1a";
-    items.style.color = "#1a1a1a";
-    items.style.opacity = "1";
-    items.style.cursor = "pointer";
-    items.style.pointerEvents = "all";
-    menu.classList.add("open");
-    scroller.stop();
+    preventDefault();
   }
 });
 
