@@ -80,19 +80,8 @@
   }
 }
 
-html {
-  position: fixed;
-  height: 100%;
-  overflow: hidden;
-}
-
-body {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
+.portfolio {
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
 }
 
 main {
