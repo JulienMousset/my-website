@@ -116,13 +116,13 @@ item1.addEventListener("mouseleave", () => {
   }
 });
 
-item1.addEventListener("touchend", () => {
+/*item1.addEventListener("touchend", () => {
   item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
   item1.style.color = "#1a1a1a";
   logo.style.backgroundColor = "#f7aea8";
-});
+});*/
 
 item1.addEventListener("click", () => {
   items.style.transition = "all 0.5s ease";
@@ -137,7 +137,7 @@ item1.addEventListener("click", () => {
   scroller.scrollTo(page1);
 });
 
-item1.addEventListener("touchend", () => {
+/*item1.addEventListener("touchend", () => {
   console.log("hello");
   items.style.transition = "all 0.5s ease";
   menu.style.transition = "all 0.5s ease";
@@ -149,7 +149,7 @@ item1.addEventListener("touchend", () => {
   menu.classList.remove("open");
   scroller.start();
   scroller.scrollTo(page1);
-});
+});*/
 
 item2.addEventListener("mouseenter", () => {
   item2.style.transition = "all 0.25s ease";
