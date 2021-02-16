@@ -80,10 +80,6 @@
   }
 }
 
-.portfolio {
-  overflow-x: hidden;
-}
-
 main {
   overflow: hidden;
   overscroll-behavior: none;
@@ -161,6 +157,8 @@ button {
   right: 20px;
   z-index: 2;
   animation: landing 2s ease-in-out;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .items {
