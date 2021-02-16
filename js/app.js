@@ -49,7 +49,7 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "none";
     menu.classList.remove("open");
     scroller.start();
-    document.body.overflow = "auto";
+    menu.overflow = "auto";
   } else {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
@@ -63,7 +63,7 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "all";
     menu.classList.add("open");
     scroller.stop();
-    document.body.overflow = "hidden";
+    menu.overflow = "hidden";
   }
 });
 
