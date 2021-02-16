@@ -476,7 +476,7 @@ github.addEventListener("mouseenter", () => {
   github.style.transform = "scale(2)";
 });
 
-github.addEventListener("touchmove", () => {
+github.addEventListener("click", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
 });
