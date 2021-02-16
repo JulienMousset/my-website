@@ -80,13 +80,20 @@
   }
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+body {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
 main {
   overflow: hidden;
   overscroll-behavior: none;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 h1 {
