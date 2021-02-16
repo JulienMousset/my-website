@@ -126,6 +126,10 @@ button {
   transition: opacity 1.5s;
 }
 
+:focus {
+  outline: 0;
+}
+
 .highlight {
   color: #ffffa1;
 }
