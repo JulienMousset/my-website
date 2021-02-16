@@ -104,6 +104,7 @@ item1.addEventListener("click", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page1);
 });
@@ -117,6 +118,7 @@ item1.addEventListener("touchend", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page1);
 });
@@ -158,6 +160,7 @@ item2.addEventListener("click", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page2, { offset: "200" });
 });
@@ -171,6 +174,7 @@ item2.addEventListener("touchend", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page2, { offset: "200" });
 });
@@ -212,6 +216,7 @@ item3.addEventListener("click", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page3, { offset: "200" });
 });
@@ -225,6 +230,7 @@ item3.addEventListener("touchend", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page3, { offset: "200" });
 });
@@ -266,6 +272,7 @@ item4.addEventListener("click", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page4, { offset: "200" });
 });
@@ -279,6 +286,7 @@ item4.addEventListener("touchend", () => {
   items.style.cursor = "default";
   items.style.pointerEvents = "none";
   menu.classList.remove("open");
+  document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page4, { offset: "200" });
 });
