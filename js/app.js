@@ -411,12 +411,12 @@ button.addEventListener("mouseenter", () => {
   button.style.color = "#1a1a1a";
 });
 
-/*button.addEventListener("touchstart", () => {
+button.addEventListener("touchstart", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #1a1a1a";
   button.style.backgroundColor = "#f4f4f4";
   button.style.color = "#1a1a1a";
-});*/
+});
 
 button.addEventListener("mouseleave", () => {
   button.style.transition = "all 0.25s ease";
@@ -425,12 +425,12 @@ button.addEventListener("mouseleave", () => {
   button.style.color = "#f4f4f4";
 });
 
-/*button.addEventListener("touchend", () => {
+button.addEventListener("touchend", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #f4f4f4";
   button.style.backgroundColor = "#1a1a1a";
   button.style.color = "#f4f4f4";
-});*/
+});
 
 button.addEventListener("click", () => {
   cv.style.transition = "all 0.75s ease";
@@ -440,13 +440,13 @@ button.addEventListener("click", () => {
   scroller.scrollTo(page4);
 });
 
-/*button.addEventListener("touchcancel", () => {
+button.addEventListener("touchcancel", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "100%";
   cv.style.transform = "translate(0%)";
   cv.style.opacity = 1;
   scroller.scrollTo(page4);
-});*/
+});
 
 cv.addEventListener("mouseleave", () => {
   cv.style.transition = "all 0.75s ease";
