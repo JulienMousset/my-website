@@ -20,7 +20,7 @@ const github = document.querySelector(".github");
 const bandcamp = document.querySelector(".bandcamp");
 const linkedin = document.querySelector(".linkedin");
 const mail = document.querySelector(".mail");
-var scroller = new LocomotiveScroll({
+const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   smartphone: {
@@ -335,17 +335,7 @@ container.addEventListener("touchmove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-  /*e.preventDefault();*/
-  scroller.stop();
-  var scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    smartphone: {
-      smooth: false,
-    },
-    tablet: {
-      smooth: false,
-    },
+  e.preventDefault();
 });
 
 container.addEventListener("mouseleave", () => {
@@ -354,16 +344,6 @@ container.addEventListener("mouseleave", () => {
 
 container.addEventListener("touchend", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  scroller.start();
-  var scroller = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
-    smooth: true,
-    smartphone: {
-      smooth: true,
-    },
-    tablet: {
-      smooth: true,
-    },
 });
 
 link.addEventListener("mouseenter", () => {
