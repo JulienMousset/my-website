@@ -48,7 +48,7 @@ logo.addEventListener("click", () => {
     items.style.cursor = "default";
     items.style.pointerEvents = "none";
     menu.classList.remove("open");
-    document.body.overflow = "hidden";
+    jQuery(document.body).css("overflow", "hidden");
     scroller.start();
   } else {
     logo.style.transition = "all 0.75s ease";
@@ -62,7 +62,7 @@ logo.addEventListener("click", () => {
     items.style.cursor = "pointer";
     items.style.pointerEvents = "all";
     menu.classList.add("open");
-    document.body.overflow = "hidden";
+    jQuery(document.body).css("overflow", "hidden");
     scroller.stop();
   }
 });
