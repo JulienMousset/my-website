@@ -346,18 +346,18 @@ container.addEventListener("mouseenter", () => {
   container.style.opacity = "0";
 });
 
-container.addEventListener("touchstart", () => {
+/*container.addEventListener("touchstart", () => {
   container.style.transition = "all 0.25s ease";
   container.style.opacity = "0";
-});
+});*/
 
 container.addEventListener("mouseleave", () => {
   container.style.opacity = "1";
 });
 
-container.addEventListener("touchend", () => {
+/*container.addEventListener("touchend", () => {
   container.style.opacity = "1";
-});
+});*/
 
 container.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
@@ -376,9 +376,9 @@ container.addEventListener("mouseleave", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
 });
 
-container.addEventListener("touchend", () => {
+/*container.addEventListener("touchend", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-});
+});*/
 
 link.addEventListener("mouseenter", () => {
   link.style.transition = "all 0.25s ease";
@@ -423,12 +423,12 @@ button.addEventListener("mouseenter", () => {
   button.style.color = "#1a1a1a";
 });
 
-/*button.addEventListener("touchstart", () => {
+button.addEventListener("touchstart", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #1a1a1a";
   button.style.backgroundColor = "#f4f4f4";
   button.style.color = "#1a1a1a";
-});*/
+});
 
 button.addEventListener("mouseleave", () => {
   button.style.transition = "all 0.25s ease";
@@ -475,13 +475,13 @@ cv.addEventListener("click", () => {
   scroller.scrollTo("bottom");
 });
 
-cv.addEventListener("touchcancel", () => {
+/*cv.addEventListener("touchcancel", () => {
   cv.style.transition = "all 0.75s ease";
   cv.style.width = "0%";
   cv.style.transform = "translate(-250%)";
   cv.style.opacity = 0;
   scroller.scrollTo("bottom");
-});
+});*/
 
 github.addEventListener("mouseenter", () => {
   github.style.transition = "all 0.25s ease";
