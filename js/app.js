@@ -58,6 +58,7 @@ logo.addEventListener("click", () => {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
     items.style.transition = "all 1s ease";
+    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1000)";
     logo.style.backgroundColor = "#1a1a1a";
     items.style.color = "#1a1a1a";
