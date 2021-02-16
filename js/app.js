@@ -29,6 +29,12 @@ $(document).on("touchmove", function (e) {
   e.preventDefault();
 });
 
+$(document).on("touchstart", function (e) {
+  if (e.target.nodeName !== "INPUT") {
+    e.preventDefault();
+  }
+});
+
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
