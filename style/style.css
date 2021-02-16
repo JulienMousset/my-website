@@ -80,14 +80,6 @@
   }
 }
 
-html,
-body {
-  /*  */
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-}
-
 main {
   overflow: hidden;
   overscroll-behavior: none;
