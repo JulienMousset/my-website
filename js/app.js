@@ -23,9 +23,16 @@ const mail = document.querySelector(".mail");
 const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
+  smartphone: {
+    smooth: true,
+  },
+  tablet: {
+    smooth: true,
+  },
 });
 
 window.addEventListener("scroll", () => {
+  console.log("yo xD");
   if (menu.classList.contains("open")) {
     console.log("yo xD");
     document.body.position = "fixed";
