@@ -31,16 +31,6 @@ const scroller = new LocomotiveScroll({
   },
 });
 
-window.addEventListener("scroll", () => {
-  console.log("yo xD");
-  if (menu.classList.contains("open")) {
-    console.log("yo xD");
-    document.body.position = "fixed";
-    document.body.overflow = "hidden";
-    preventDefault();
-  }
-});
-
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
@@ -345,7 +335,8 @@ container.addEventListener("touchmove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-  e.preventDefault();
+  /*e.preventDefault();*/
+  scroller.stop();
 });
 
 container.addEventListener("mouseleave", () => {
