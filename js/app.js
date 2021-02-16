@@ -392,6 +392,12 @@ link.addEventListener("mouseleave", () => {
   link.style.color = "#f4f4f4";
 });
 
+link.addEventListener("click", () => {
+  link.style.transition = "all 0.25s ease";
+  link.style.backgroundColor = "#1a1a1a";
+  link.style.color = "#f4f4f4";
+});
+
 email.addEventListener("mouseenter", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#f4f4f4";
@@ -399,6 +405,12 @@ email.addEventListener("mouseenter", () => {
 });
 
 email.addEventListener("mouseleave", () => {
+  email.style.transition = "all 0.25s ease";
+  email.style.backgroundColor = "#1a1a1a";
+  email.style.color = "#f4f4f4";
+});
+
+email.addEventListener("click", () => {
   email.style.transition = "all 0.25s ease";
   email.style.backgroundColor = "#1a1a1a";
   email.style.color = "#f4f4f4";
@@ -476,12 +488,12 @@ github.addEventListener("mouseenter", () => {
   github.style.transform = "scale(2)";
 });
 
-github.addEventListener("click", () => {
+github.addEventListener("mouseleave", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
 });
 
-github.addEventListener("mouseleave", () => {
+github.addEventListener("click", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
 });
@@ -496,6 +508,11 @@ bandcamp.addEventListener("mouseleave", () => {
   bandcamp.style.transform = "scale(1)";
 });
 
+bandcamp.addEventListener("click", () => {
+  bandcamp.style.transition = "all 0.25s ease";
+  bandcamp.style.transform = "scale(1)";
+});
+
 linkedin.addEventListener("mouseenter", () => {
   linkedin.style.transition = "all 0.25s ease";
   linkedin.style.transform = "scale(2)";
@@ -506,12 +523,22 @@ linkedin.addEventListener("mouseleave", () => {
   linkedin.style.transform = "scale(1)";
 });
 
+linkedin.addEventListener("click", () => {
+  linkedin.style.transition = "all 0.25s ease";
+  linkedin.style.transform = "scale(1)";
+});
+
 mail.addEventListener("mouseenter", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(2)";
 });
 
 mail.addEventListener("mouseleave", () => {
+  mail.style.transition = "all 0.25s ease";
+  mail.style.transform = "scale(1)";
+});
+
+mail.addEventListener("click", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(1)";
 });
