@@ -423,12 +423,12 @@ button.addEventListener("mouseenter", () => {
   button.style.color = "#1a1a1a";
 });
 
-button.addEventListener("touchstart", () => {
+/*button.addEventListener("touchstart", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #1a1a1a";
   button.style.backgroundColor = "#f4f4f4";
   button.style.color = "#1a1a1a";
-});
+});*/
 
 button.addEventListener("mouseleave", () => {
   button.style.transition = "all 0.25s ease";
@@ -437,7 +437,7 @@ button.addEventListener("mouseleave", () => {
   button.style.color = "#f4f4f4";
 });
 
-button.addEventListener("touchend", () => {
+button.addEventListener("click", () => {
   button.style.transition = "all 0.25s ease";
   button.style.border = "5px solid #f4f4f4";
   button.style.backgroundColor = "#1a1a1a";

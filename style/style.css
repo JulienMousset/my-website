@@ -214,9 +214,6 @@ button {
   opacity: 0;
   transition: opacity 0.25s;
   animation: fade 1s ease-in-out;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  oncontextmenu: "return false;";
 }
 
 .profile-color {
