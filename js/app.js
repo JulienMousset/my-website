@@ -62,7 +62,7 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "all";
     menu.classList.add("open");
     scroller.stop();
-    preventDefault();
+    document.body.position = "fixed";
   }
 });
 
