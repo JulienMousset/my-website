@@ -357,7 +357,6 @@ button {
   grid-row: 6/7;
   justify-self: center;
   align-self: center;
-  overflow: hidden;
 }
 
 .social-links img {
