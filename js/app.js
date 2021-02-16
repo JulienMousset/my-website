@@ -25,12 +25,14 @@ const scroller = new LocomotiveScroll({
   smooth: true,
 });
 
-if (menu.classList.contains("open")) {
-  console.log("yo xD");
-  document.body.position = "fixed";
-  document.body.overflow = "hidden";
-  preventDefault();
-}
+window.addEventListener("scroll", () => {
+  if (menu.classList.contains("open")) {
+    console.log("yo xD");
+    document.body.position = "fixed";
+    document.body.overflow = "hidden";
+    preventDefault();
+  }
+});
 
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
