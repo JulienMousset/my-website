@@ -471,12 +471,12 @@ cv.addEventListener("touchcancel", () => {
   scroller.scrollTo("bottom");
 });
 
-github.addEventListener("touchstart", () => {
-  preventDefault();
+github.addEventListener("touchstart", (e) => {
+  e.preventDefault();
 });
 
-github.addEventListener("touchend", () => {
-  preventDefault();
+github.addEventListener("touchend", (e) => {
+  e.preventDefault();
 });
 
 github.addEventListener("mouseenter", () => {
