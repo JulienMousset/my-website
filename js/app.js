@@ -21,6 +21,14 @@ const bandcamp = document.querySelector(".bandcamp");
 const linkedin = document.querySelector(".linkedin");
 const mail = document.querySelector(".mail");
 
+document.body.addEventListener(
+  "touchmove",
+  function (event) {
+    event.preventDefault();
+  },
+  false
+);
+
 const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
