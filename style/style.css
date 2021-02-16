@@ -80,13 +80,6 @@
   }
 }
 
-html,
-body,
-.portfolio {
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: none;
-}
-
 main {
   overflow: hidden;
   overscroll-behavior: none;
@@ -364,6 +357,7 @@ button {
   grid-row: 6/7;
   justify-self: center;
   align-self: center;
+  overflow: hidden;
 }
 
 .social-links img {
