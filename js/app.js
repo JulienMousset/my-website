@@ -20,10 +20,13 @@ const github = document.querySelector(".github");
 const bandcamp = document.querySelector(".bandcamp");
 const linkedin = document.querySelector(".linkedin");
 const mail = document.querySelector(".mail");
-
 const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
+});
+
+$(document).on("touchmove", function (e) {
+  e.preventDefault();
 });
 
 logo.addEventListener("mouseenter", () => {
