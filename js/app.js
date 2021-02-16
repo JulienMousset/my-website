@@ -35,10 +35,10 @@ logo.addEventListener("mouseleave", () => {
   logo.style.transform = "scale(1)";
 });
 
-/*logo.addEventListener("touchend", () => {
+logo.addEventListener("touchend", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-});*/
+});
 
 logo.addEventListener("click", () => {
   if (menu.classList.contains("open")) {
@@ -70,7 +70,7 @@ logo.addEventListener("click", () => {
   }
 });
 
-/*logo.addEventListener("touchcancel", () => {
+logo.addEventListener("touchcancel", () => {
   if (menu.classList.contains("open")) {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
@@ -96,7 +96,7 @@ logo.addEventListener("click", () => {
     menu.classList.add("open");
     scroller.stop();
   }
-});*/
+});
 
 item1.addEventListener("mouseenter", () => {
   item1.style.transition = "all 0.25s ease";
