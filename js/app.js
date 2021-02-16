@@ -28,11 +28,13 @@ const scroller = new LocomotiveScroll({
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
+  document.body.overflow = "hidden";
 });
 
 logo.addEventListener("mouseleave", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
+  document.body.overflow = "hidden";
 });
 
 logo.addEventListener("click", () => {
@@ -49,6 +51,7 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "none";
     menu.classList.remove("open");
     scroller.start();
+    document.body.overflow = "hidden";
   } else {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
