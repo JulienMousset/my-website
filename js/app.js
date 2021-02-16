@@ -20,7 +20,7 @@ const github = document.querySelector(".github");
 const bandcamp = document.querySelector(".bandcamp");
 const linkedin = document.querySelector(".linkedin");
 const mail = document.querySelector(".mail");
-const scroller = new LocomotiveScroll({
+var scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
   smartphone: {
@@ -337,6 +337,15 @@ container.addEventListener("touchmove", (e) => {
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
   /*e.preventDefault();*/
   scroller.stop();
+  var scroller = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    smartphone: {
+      smooth: false,
+    },
+    tablet: {
+      smooth: false,
+    },
 });
 
 container.addEventListener("mouseleave", () => {
@@ -345,6 +354,16 @@ container.addEventListener("mouseleave", () => {
 
 container.addEventListener("touchend", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  scroller.start();
+  var scroller = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    smartphone: {
+      smooth: true,
+    },
+    tablet: {
+      smooth: true,
+    },
 });
 
 link.addEventListener("mouseenter", () => {
