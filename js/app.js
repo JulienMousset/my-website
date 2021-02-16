@@ -471,17 +471,14 @@ cv.addEventListener("touchcancel", () => {
   scroller.scrollTo("bottom");
 });
 
-github.addEventListener("touchstart", (e) => {
-  e.preventDefault();
-});
-
-github.addEventListener("touchend", (e) => {
-  e.preventDefault();
-});
-
 github.addEventListener("mouseenter", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
+});
+
+github.addEventListener("touchmove", () => {
+  github.style.transition = "all 0.25s ease";
+  github.style.transform = "scale(1)";
 });
 
 github.addEventListener("mouseleave", () => {
