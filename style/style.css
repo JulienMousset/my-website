@@ -80,6 +80,11 @@
   }
 }
 
+html,
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
 main {
   overflow: hidden;
   overscroll-behavior: none;
