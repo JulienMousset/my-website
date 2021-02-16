@@ -471,16 +471,22 @@ cv.addEventListener("touchcancel", () => {
   scroller.scrollTo("bottom");
 });
 
+github.addEventListener("touchstart", () => {
+  preventDefault();
+});
+
+github.addEventListener("touchend", () => {
+  preventDefault();
+});
+
 github.addEventListener("mouseenter", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
-  preventDefault();
 });
 
 github.addEventListener("mouseleave", () => {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
-  preventDefault();
 });
 
 bandcamp.addEventListener("mouseenter", () => {
