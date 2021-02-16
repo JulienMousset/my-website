@@ -83,6 +83,7 @@
 main {
   overflow: hidden;
   overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1 {
