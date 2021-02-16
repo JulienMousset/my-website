@@ -45,6 +45,7 @@ logo.addEventListener("click", () => {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
     items.style.transition = "all 0.5s ease";
+    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1)";
     logo.style.backgroundColor = "#f7aea8";
     items.style.color = "transparent";
@@ -259,14 +260,6 @@ item3.addEventListener("touchend", () => {
 });
 
 item4.addEventListener("mouseenter", () => {
-  item4.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(2)";
-  logo.style.backgroundColor = "#f4f4f4";
-  item4.style.color = "#f4f4f4";
-});
-
-item4.addEventListener("touchstart", () => {
   item4.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
