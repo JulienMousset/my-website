@@ -49,7 +49,6 @@ logo.addEventListener("click", () => {
     items.style.pointerEvents = "none";
     menu.classList.remove("open");
     scroller.start();
-    menu.overflow = "auto";
   } else {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
