@@ -13,6 +13,7 @@ const page2 = document.querySelector(".page-2");
 const link = document.querySelector(".link");
 const page3 = document.querySelector(".page-3");
 const page4 = document.querySelector(".page-4");
+const contact = document.querySelector(".contact");
 const email = document.querySelector(".e-mail");
 const button = document.querySelector("button");
 const cv = document.querySelector(".cv");
@@ -20,6 +21,8 @@ const github = document.querySelector(".github");
 const bandcamp = document.querySelector(".bandcamp");
 const linkedin = document.querySelector(".linkedin");
 const mail = document.querySelector(".mail");
+const handshake = document.querySelector(".handshake");
+const letter = document.querySelector(".letter");
 const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
@@ -316,7 +319,7 @@ item4.addEventListener("touchend", () => {
   }
 });
 
-const text = new Blotter.Text("Julien Mousset", {
+const name = new Blotter.Text("Julien Mousset", {
   family: "'Astloch', serif",
   size: 120,
   fill: "#f7aea8",
@@ -331,8 +334,8 @@ material.uniforms.uSpeed.value = 0.3;
 material.uniforms.uVolatility.value = 0.02;
 material.uniforms.uSeed.value = 0.1;
 
-const blotter = new Blotter(material, { texts: text });
-const scope = blotter.forText(text);
+const blotter = new Blotter(material, { texts: name });
+const scope = blotter.forText(name);
 
 scope.appendTo(title);
 
@@ -441,7 +444,32 @@ button.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
   cv.style.transition = "all 0.75s ease";
-  cv.style.width = "100%";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "150vh";
+    cv.style.width = null;
+  } else {
+    cv.style.width = "100%";
+    cv.style.height = null;
+    page4.style.height = "100vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "0";
+    email.style.opacity = "0";
+    button.style.opacity = "0";
+    github.style.opacity = "0";
+    bandcamp.style.opacity = "0";
+    linkedin.style.opacity = "0";
+    mail.style.opacity = "0";
+    handshake.style.opacity = "0";
+    letter.style.opacity = "0";
+  }
   cv.style.transform = "translate(0%)";
   cv.style.opacity = 1;
   scroller.scrollTo(page4);
@@ -449,7 +477,32 @@ button.addEventListener("click", () => {
 
 button.addEventListener("touchcancel", () => {
   cv.style.transition = "all 0.75s ease";
-  cv.style.width = "100%";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "150vh";
+    cv.style.width = null;
+  } else {
+    cv.style.width = "100%";
+    cv.style.height = null;
+    page4.style.height = "100vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "0";
+    email.style.opacity = "0";
+    button.style.opacity = "0";
+    github.style.opacity = "0";
+    bandcamp.style.opacity = "0";
+    linkedin.style.opacity = "0";
+    mail.style.opacity = "0";
+    handshake.style.opacity = "0";
+    letter.style.opacity = "0";
+  }
   cv.style.transform = "translate(0%)";
   cv.style.opacity = 1;
   scroller.scrollTo(page4);
@@ -457,14 +510,60 @@ button.addEventListener("touchcancel", () => {
 
 cv.addEventListener("mouseleave", () => {
   cv.style.transition = "all 0.75s ease";
-  cv.style.width = "0%";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "0vh";
+  } else {
+    cv.style.width = "0%";
+    page4.style.height = "150vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "1";
+    email.style.opacity = "1";
+    button.style.opacity = "1";
+    github.style.opacity = "1";
+    bandcamp.style.opacity = "1";
+    linkedin.style.opacity = "1";
+    mail.style.opacity = "1";
+    handshake.style.opacity = "1";
+    letter.style.opacity = "1";
+  }
   cv.style.transform = "translate(-250%)";
   cv.style.opacity = 0;
 });
 
 cv.addEventListener("click", () => {
   cv.style.transition = "all 0.75s ease";
-  cv.style.width = "0%";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "0vh";
+  } else {
+    cv.style.width = "0%";
+    page4.style.height = "150vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "1";
+    email.style.opacity = "1";
+    button.style.opacity = "1";
+    github.style.opacity = "1";
+    bandcamp.style.opacity = "1";
+    linkedin.style.opacity = "1";
+    mail.style.opacity = "1";
+    handshake.style.opacity = "1";
+    letter.style.opacity = "1";
+  }
   cv.style.transform = "translate(-250%)";
   cv.style.opacity = 0;
   scroller.scrollTo("bottom");
@@ -472,6 +571,30 @@ cv.addEventListener("click", () => {
 
 cv.addEventListener("touchcancel", () => {
   cv.style.transition = "all 0.75s ease";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "0vh";
+  } else {
+    cv.style.width = "0%";
+    page4.style.height = "150vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "1";
+    email.style.opacity = "1";
+    button.style.opacity = "1";
+    github.style.opacity = "1";
+    bandcamp.style.opacity = "1";
+    linkedin.style.opacity = "1";
+    mail.style.opacity = "1";
+    handshake.style.opacity = "1";
+    letter.style.opacity = "1";
+  }
   cv.style.width = "0%";
   cv.style.transform = "translate(-250%)";
   cv.style.opacity = 0;

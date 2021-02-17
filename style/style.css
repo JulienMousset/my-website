@@ -365,10 +365,8 @@ button {
 }
 
 .cv {
-  width: 0%;
   cursor: pointer;
   opacity: 0;
-  grid-column: 2/3;
   transform: translate(-250%);
 }
 
@@ -796,5 +794,19 @@ button {
   .social-links img {
     padding: 0px 5px;
     width: 24px;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .cv {
+    width: 0%;
+    grid-column: 1/4;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .cv {
+    height: 0vh;
+    grid-column: 2/3;
   }
 }
