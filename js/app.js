@@ -24,6 +24,7 @@ const scroller = new LocomotiveScroll({
   el: document.querySelector("[data-scroll-container]"),
   smooth: true,
 });
+const screen = window.matchMedia("(max-width: 1280px)");
 
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
@@ -107,6 +108,11 @@ item1.addEventListener("click", () => {
   document.body.style.overflow = "auto";
   scroller.start();
   scroller.scrollTo(page1);
+  if (screen.matches) {
+    scroller.scrollTo(page4);
+  } else {
+    scroller.scrollTo(page1);
+  }
 });
 
 item1.addEventListener("touchend", () => {
