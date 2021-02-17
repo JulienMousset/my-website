@@ -5,7 +5,6 @@ const item1 = document.querySelector(".item-1");
 const item2 = document.querySelector(".item-2");
 const item3 = document.querySelector(".item-3");
 const item4 = document.querySelector(".item-4");
-const title = document.querySelector(".title-2");
 const container = document.querySelector(".profile-bw");
 const card = document.querySelector(".profile-color");
 const page1 = document.querySelector(".page-1");
@@ -349,26 +348,6 @@ item4.addEventListener("touchend", () => {
     scroller.scrollTo(page4, { offset: "200" });
   }
 });
-
-/*const name = new Blotter.Text("Julien Mousset", {
-  family: "'Astloch', serif",
-  size: 120,
-  fill: "#f7aea8",
-  fontWeight: 400,
-  paddingLeft: 100,
-  paddingRight: 100,
-});
-
-const material = new Blotter.LiquidDistortMaterial();
-
-material.uniforms.uSpeed.value = 0.3;
-material.uniforms.uVolatility.value = 0.02;
-material.uniforms.uSeed.value = 0.1;
-
-const blotter = new Blotter(material, { texts: name });
-const scope = blotter.forText(name);
-
-scope.appendTo(title);*/
 
 container.addEventListener("mouseenter", () => {
   container.style.transition = "all 0.25s ease";
