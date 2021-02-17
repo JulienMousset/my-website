@@ -29,6 +29,37 @@ const scroller = new LocomotiveScroll({
 });
 const screen = window.matchMedia("(max-width: 1280px)");
 
+window.addEventListener("orientationchange", () => {
+  cv.style.transition = "all 0.75s ease";
+  if (window.innerWidth > window.innerHeight) {
+    cv.style.height = "0vh";
+  } else {
+    cv.style.width = "0%";
+    page4.style.height = "150vh";
+    contact.style.transition = "all 0.5s ease";
+    email.style.transition = "all 0.5s ease";
+    button.style.transition = "all 0.5s ease";
+    github.style.transition = "all 0.5s ease";
+    bandcamp.style.transition = "all 0.5s ease";
+    linkedin.style.transition = "all 0.5s ease";
+    mail.style.transition = "all 0.5s ease";
+    handshake.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";
+    contact.style.opacity = "1";
+    email.style.opacity = "1";
+    button.style.opacity = "1";
+    github.style.opacity = "1";
+    bandcamp.style.opacity = "1";
+    linkedin.style.opacity = "1";
+    mail.style.opacity = "1";
+    handshake.style.opacity = "1";
+    letter.style.opacity = "1";
+  }
+  cv.style.transform = "translate(-250%)";
+  cv.style.opacity = 0;
+  scroller.scrollTo("bottom");
+});
+
 logo.addEventListener("mouseenter", () => {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";

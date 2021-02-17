@@ -375,6 +375,10 @@ button {
   transition: opacity 1.5s;
 }
 
+.hide {
+  opacity: 0;
+}
+
 .scroll-opacity {
   opacity: 1;
 }
@@ -433,35 +437,35 @@ button {
   }
 
   .boom {
-    height: 20vh;
+    height: 15vh;
     justify-self: center;
     align-self: center;
   }
 
   .antic {
-    height: 20vh;
+    height: 15vh;
     justify-self: center;
     align-self: center;
   }
 
   .shooting-star {
-    height: 20vh;
+    height: 15vh;
     justify-self: center;
     align-self: center;
   }
 
   .games {
-    height: 20vh;
+    height: 15vh;
     justify-self: center;
     align-self: center;
   }
 
   .handshake img {
-    height: 15vh;
+    height: 10vh;
   }
 
   .letter img {
-    height: 15vh;
+    height: 10vh;
   }
 }
 
@@ -802,11 +806,27 @@ button {
     width: 0%;
     grid-column: 1/4;
   }
+  .item {
+    text-align: center;
+  }
+  .items {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media screen and (orientation: landscape) {
   .cv {
     height: 0vh;
     grid-column: 2/3;
+  }
+  .item {
+    text-align: center;
+  }
+  .items {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
