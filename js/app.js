@@ -350,7 +350,7 @@ item4.addEventListener("touchend", () => {
   }
 });
 
-const name = new Blotter.Text("Julien Mousset", {
+/*const name = new Blotter.Text("Julien Mousset", {
   family: "'Astloch', serif",
   size: 120,
   fill: "#f7aea8",
@@ -368,7 +368,7 @@ material.uniforms.uSeed.value = 0.1;
 const blotter = new Blotter(material, { texts: name });
 const scope = blotter.forText(name);
 
-scope.appendTo(title);
+scope.appendTo(title);*/
 
 container.addEventListener("mouseenter", () => {
   container.style.transition = "all 0.25s ease";
