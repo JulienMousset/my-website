@@ -107,7 +107,7 @@ item1.addEventListener("click", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page1);
+  //scroller.scrollTo(page1);
   if (screen.matches) {
     scroller.scrollTo(page4);
   } else {
@@ -126,7 +126,12 @@ item1.addEventListener("touchend", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page1);
+  //scroller.scrollTo(page1);
+  if (screen.matches) {
+    scroller.scrollTo(page4);
+  } else {
+    scroller.scrollTo(page1);
+  }
 });
 
 item2.addEventListener("mouseenter", () => {
