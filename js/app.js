@@ -107,12 +107,7 @@ item1.addEventListener("click", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  //scroller.scrollTo(page1);
-  if (screen.matches) {
-    scroller.scrollTo(page4);
-  } else {
-    scroller.scrollTo(page1);
-  }
+  scroller.scrollTo(page1);
 });
 
 item1.addEventListener("touchend", () => {
@@ -126,12 +121,7 @@ item1.addEventListener("touchend", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  //scroller.scrollTo(page1);
-  if (screen.matches) {
-    scroller.scrollTo(page4);
-  } else {
-    scroller.scrollTo(page1);
-  }
+  scroller.scrollTo(page1);
 });
 
 item2.addEventListener("mouseenter", () => {
@@ -173,7 +163,11 @@ item2.addEventListener("click", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page2, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page2);
+  } else {
+    scroller.scrollTo(page2, { offset: "200" });
+  }
 });
 
 item2.addEventListener("touchend", () => {
@@ -187,7 +181,11 @@ item2.addEventListener("touchend", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page2, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page2);
+  } else {
+    scroller.scrollTo(page2, { offset: "200" });
+  }
 });
 
 item3.addEventListener("mouseenter", () => {
@@ -229,7 +227,11 @@ item3.addEventListener("click", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page3, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page3);
+  } else {
+    scroller.scrollTo(page3, { offset: "200" });
+  }
 });
 
 item3.addEventListener("touchend", () => {
@@ -243,7 +245,11 @@ item3.addEventListener("touchend", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page3, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page3);
+  } else {
+    scroller.scrollTo(page3, { offset: "200" });
+  }
 });
 
 item4.addEventListener("mouseenter", () => {
@@ -285,7 +291,11 @@ item4.addEventListener("click", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page4, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page4);
+  } else {
+    scroller.scrollTo(page4, { offset: "200" });
+  }
 });
 
 item4.addEventListener("touchend", () => {
@@ -299,7 +309,11 @@ item4.addEventListener("touchend", () => {
   menu.classList.remove("open");
   document.body.style.overflow = "auto";
   scroller.start();
-  scroller.scrollTo(page4, { offset: "200" });
+  if (screen.matches) {
+    scroller.scrollTo(page4);
+  } else {
+    scroller.scrollTo(page4, { offset: "200" });
+  }
 });
 
 const text = new Blotter.Text("Julien Mousset", {
