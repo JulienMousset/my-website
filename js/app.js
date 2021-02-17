@@ -57,7 +57,7 @@ window.addEventListener("orientationchange", () => {
   }
   cv.style.transform = "translate(-250%)";
   cv.style.opacity = 0;
-  //scroller.scrollTo("top");
+  scroller.scrollTo("top");
 });
 
 logo.addEventListener("mouseenter", () => {
