@@ -29,13 +29,13 @@ const scroller = new LocomotiveScroll({
 const screen = window.matchMedia("(max-width: 1280px)");
 
 window.addEventListener("orientationchange", () => {
-  cv.style.transition = "all 0.75s ease";
+  //cv.style.transition = "all 0.75s ease";
   if (window.innerWidth > window.innerHeight) {
     cv.style.height = "0vh";
   } else {
     cv.style.width = "0%";
     page4.style.height = "150vh";
-    contact.style.transition = "all 0.5s ease";
+    /*contact.style.transition = "all 0.5s ease";
     email.style.transition = "all 0.5s ease";
     button.style.transition = "all 0.5s ease";
     github.style.transition = "all 0.5s ease";
@@ -43,7 +43,7 @@ window.addEventListener("orientationchange", () => {
     linkedin.style.transition = "all 0.5s ease";
     mail.style.transition = "all 0.5s ease";
     handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
+    letter.style.transition = "all 0.5s ease";*/
     contact.style.opacity = "1";
     email.style.opacity = "1";
     button.style.opacity = "1";
