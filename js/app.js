@@ -1,3 +1,4 @@
+"use strict";
 const logo = document.querySelector(".logo");
 const menu = document.querySelector(".menu");
 const items = document.querySelector(".items");
