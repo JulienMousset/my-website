@@ -1,4 +1,5 @@
 "use strict";
+
 const logo = document.querySelector(".logo");
 const menu = document.querySelector(".menu");
 const items = document.querySelector(".items");
@@ -661,3 +662,6 @@ mail.addEventListener("click", () => {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(1)";
 });
+
+/*mail.addEventListener("click", someFunction);
+mail.addEventListener("mouseleave", someFunction);*/
