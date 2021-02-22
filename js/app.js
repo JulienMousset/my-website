@@ -346,10 +346,14 @@ container.addEventListener("mouseenter", () => {
   container.style.opacity = "0";
 });
 
-container.addEventListener("touchstart", () => {
-  container.style.transition = "all 0.25s ease";
-  container.style.opacity = "0";
-});
+container.addEventListener(
+  "touchstart",
+  () => {
+    container.style.transition = "all 0.25s ease";
+    container.style.opacity = "0";
+  },
+  { passive: true }
+);
 
 container.addEventListener("mouseleave", () => {
   container.style.opacity = "1";
@@ -365,12 +369,16 @@ container.addEventListener("mousemove", (e) => {
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
-container.addEventListener("touchmove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-  e.preventDefault();
-});
+container.addEventListener(
+  "touchmove",
+  (e) => {
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    e.preventDefault();
+  },
+  { passive: true }
+);
 
 container.addEventListener("mouseleave", () => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
@@ -423,12 +431,16 @@ button.addEventListener("mouseenter", () => {
   button.style.color = "#1a1a1a";
 });
 
-button.addEventListener("touchstart", () => {
-  button.style.transition = "all 0.25s ease";
-  button.style.border = "5px solid #1a1a1a";
-  button.style.backgroundColor = "#f4f4f4";
-  button.style.color = "#1a1a1a";
-});
+button.addEventListener(
+  "touchstart",
+  () => {
+    button.style.transition = "all 0.25s ease";
+    button.style.border = "5px solid #1a1a1a";
+    button.style.backgroundColor = "#f4f4f4";
+    button.style.color = "#1a1a1a";
+  },
+  { passive: true }
+);
 
 button.addEventListener("mouseleave", () => {
   button.style.transition = "all 0.25s ease";
