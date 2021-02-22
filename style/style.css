@@ -531,7 +531,7 @@ button {
 
   .social-links img {
     padding: 0px 10px;
-    width: 44px;
+    width: 100%;
   }
 }
 
@@ -619,7 +619,7 @@ button {
 
   .social-links img {
     padding: 0px 5px;
-    width: 24px;
+    width: 54.55%;
   }
 }
 
@@ -775,7 +775,7 @@ button {
 
   .social-links img {
     padding: 0px 5px;
-    width: 24px;
+    width: 54.55%;
   }
 }
 
