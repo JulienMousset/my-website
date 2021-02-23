@@ -249,15 +249,13 @@ function pictureMove(e) {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  e.preventDefault();
 }
 
 container.addEventListener("mouseenter", pictureIn);
 container.addEventListener("touchstart", pictureOut);
 container.addEventListener("mousemove", pictureMove);
-container.addEventListener("touchmove", (e) => {
-  pictureMove(e);
-  e.preventDefault();
-});
+container.addEventListener("touchmove", pictureMove);
 container.addEventListener("mouseleave", pictureOut);
 container.addEventListener("touchend", pictureOut);
 
