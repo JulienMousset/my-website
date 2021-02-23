@@ -102,6 +102,7 @@ button {
   grid-column: 2/3;
   grid-row: 5/6;
   justify-self: center;
+  align-self: center;
   opacity: 0;
   transition: opacity 1.5s;
 }
@@ -110,30 +111,32 @@ button {
   color: var(--yellow);
 }
 
+.svg {
+  height: 35vh;
+  justify-self: center;
+  align-self: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 /* -------- MENU -------- */
-.logo {
+.dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background-color: var(--pink);
-  cursor: pointer;
   position: fixed;
   top: 20px;
   right: 20px;
-  z-index: 3;
   animation: landing 2s ease-in-out;
+}
+.logo {
+  cursor: pointer;
+  z-index: 3;
 }
 
 .menu {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: var(--pink);
-  position: fixed;
-  top: 20px;
-  right: 20px;
   z-index: 2;
-  animation: landing 2s ease-in-out;
 }
 
 .items {
@@ -183,24 +186,21 @@ button {
   animation: fade-in 2s ease-in-out;
 }
 
-.profile-bw {
+.picture {
   height: 480px;
   border-radius: 30px;
   grid-column: 3/4;
   grid-row: 2/3;
-  transform-style: preserve-3d;
   opacity: 0;
   transition: opacity 0.25s;
+}
+
+.bw {
+  transform-style: preserve-3d;
   animation: fade-in 1s ease-in-out;
 }
 
-.profile-color {
-  height: 480px;
-  border-radius: 30px;
-  grid-column: 3/4;
-  grid-row: 2/3;
-  opacity: 0;
-  transition: opacity 0.25s;
+.color {
   animation: fade-in 3s ease-in-out;
 }
 
@@ -231,23 +231,13 @@ button {
 }
 
 .boom {
-  height: 35vh;
   grid-column: 1/2;
   grid-row: 4/5;
-  justify-self: center;
-  align-self: center;
-  opacity: 0;
-  transition: opacity 1s;
 }
 
 .antic {
-  height: 35vh;
   grid-column: 3/4;
   grid-row: 4/5;
-  justify-self: center;
-  align-self: center;
-  opacity: 0;
-  transition: opacity 1s;
 }
 
 .school {
@@ -268,23 +258,13 @@ button {
 }
 
 .shooting-star {
-  height: 35vh;
   grid-column: 1/2;
   grid-row: 4/5;
-  justify-self: center;
-  align-self: center;
-  opacity: 0;
-  transition: opacity 1s;
 }
 
 .games {
-  height: 35vh;
   grid-column: 3/4;
   grid-row: 4/5;
-  justify-self: center;
-  align-self: center;
-  opacity: 0;
-  transition: opacity 1s;
 }
 
 /* -------- PAGE-4 -------- */
@@ -306,20 +286,12 @@ button {
   justify-self: center;
 }
 
-.handshake img {
-  height: 20vh;
-}
-
 .letter {
   height: 20vh;
   transform: rotate(15deg);
   grid-column: 3/4;
   grid-row: 5/6;
   justify-self: left;
-}
-
-.letter img {
-  height: 20vh;
 }
 
 .e-mail {
@@ -393,7 +365,8 @@ button {
     font-size: 100px;
   }
 
-  p {
+  p,
+  .intro {
     font-size: 36px;
   }
 
@@ -415,14 +388,7 @@ button {
     display: none;
   }
 
-  .profile-bw {
-    height: 480px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .profile-color {
+  .picture {
     height: 480px;
     grid-column: 2/3;
     grid-row: 2/3;
@@ -430,39 +396,17 @@ button {
   }
 
   .intro {
-    font-size: 36px;
     grid-column: 2/3;
     grid-row: 4/5;
   }
 
-  .boom {
+  .svg {
     height: 15vh;
     justify-self: center;
     align-self: center;
   }
 
-  .antic {
-    height: 15vh;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .shooting-star {
-    height: 15vh;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .games {
-    height: 15vh;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .handshake img {
-    height: 10vh;
-  }
-
+  .handshake img,
   .letter img {
     height: 10vh;
   }
@@ -474,77 +418,36 @@ button {
     font-size: 60px;
   }
 
-  p {
+  p,
+  .intro {
     font-size: 24px;
   }
 
   button {
-    border: 3.75px solid var(--white);
     width: 127.5px;
     height: 45px;
     font-size: 15px;
-    align-self: center;
   }
 
   .item {
     font-size: 54px;
   }
 
-  .page-1 {
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+  .picture {
+    height: 360px;
+  }
+
+  .svg {
+    height: 20vw;
   }
 
   .stars {
     height: 5vh;
   }
 
-  .title {
-    display: none;
-  }
-
-  .profile-bw {
-    height: 360px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .profile-color {
-    height: 360px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .intro {
-    font-size: 24px;
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-
-  .boom {
-    height: 10vh;
-  }
-
-  .antic {
-    height: 10vh;
-  }
-
-  .shooting-star {
-    height: 10vh;
-  }
-
-  .games {
-    height: 10vh;
-  }
-
-  .handshake img {
-    height: 10vh;
-  }
-
+  .handshake img,
   .letter img {
-    height: 10vh;
+    height: 15vw;
   }
 
   .social-links img {
@@ -553,157 +456,63 @@ button {
   }
 }
 
-/* Max width of 240px */
-@media (max-width: 240px) {
-  h1 {
-    font-size: 36px;
+/* Max width of 896px in landscape mode*/
+@media (max-width: 896px) and (orientation: landscape) {
+  h1,
+  .item {
+    font-size: 60px;
   }
 
-  p {
-    font-size: 16px;
+  p,
+  .intro {
+    font-size: 24px;
   }
 
   button {
-    border: 2px solid var(--white);
     width: 85px;
     height: 30px;
     font-size: 10px;
-    align-self: center;
   }
 
+  .picture {
+    height: 230px;
+  }
+
+  .svg {
+    height: 15vw;
+  }
+
+  .stars,
+  .handshake img,
+  .letter img {
+    height: 10vw;
+  }
+}
+
+/* Max width of 300px */
+@media (max-width: 300px) {
+  h1,
   .item {
     font-size: 36px;
   }
 
-  .page-1 {
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
+  p,
+  .intro {
+    font-size: 16px;
+  }
+
+  button {
+    width: 85px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .picture {
+    height: 160px;
   }
 
   .stars {
     height: 15vh;
-  }
-
-  .title {
-    display: none;
-  }
-
-  .profile-bw {
-    height: 180px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .profile-color {
-    height: 180px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .intro {
-    font-size: 16px;
-    grid-column: 2/3;
-    grid-row: 4/5;
-  }
-
-  .boom {
-    height: 10vh;
-  }
-
-  .antic {
-    height: 10vh;
-  }
-
-  .shooting-star {
-    height: 10vh;
-  }
-
-  .games {
-    height: 10vh;
-  }
-
-  .handshake img {
-    height: 10vh;
-  }
-
-  .letter img {
-    height: 10vh;
-  }
-
-  .social-links img {
-    padding: 0px 5px;
-    width: 24px;
-  }
-}
-
-/* Max width of 960px in landscape mode */
-@media (max-width: 960px) and (orientation: landscape) {
-  button {
-    border: 3px solid var(--white);
-    width: 97px;
-    height: 34px;
-    font-size: 12px;
-    align-self: center;
-  }
-}
-
-/* Max width of 568px in landscape mode*/
-@media (max-width: 568px) and (orientation: landscape) {
-  button {
-    border: 2px solid var(--white);
-    width: 85px;
-    height: 30px;
-    font-size: 10px;
-    align-self: center;
-  }
-
-  .page-1 {
-    grid-template-columns: 2fr 4fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr 4fr 2fr 1fr;
-  }
-
-  .stars {
-    height: 20vh;
-  }
-
-  .profile-bw {
-    height: 180px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .profile-color {
-    height: 180px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    justify-self: center;
-  }
-
-  .boom {
-    height: 20vh;
-  }
-
-  .antic {
-    height: 20vh;
-  }
-
-  .shooting-star {
-    height: 20vh;
-  }
-
-  .games {
-    height: 20vh;
-  }
-
-  .handshake img {
-    height: 20vh;
-  }
-
-  .letter img {
-    height: 20vh;
   }
 
   .social-links img {

@@ -232,8 +232,8 @@ item4.addEventListener("click", item4Click);
 item4.addEventListener("touchend", item4Click);
 
 /* -------- PROFILE PICTURE -------- */
-const container = document.querySelector(".profile-bw");
-const card = document.querySelector(".profile-color");
+const container = document.querySelector(".bw");
+const card = document.querySelector(".color");
 
 function pictureIn() {
   container.style.transition = "all 0.25s ease";
