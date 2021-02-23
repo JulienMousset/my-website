@@ -36,6 +36,7 @@ function logoClick() {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
     items.style.transition = "all 0.5s ease";
+    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1)";
     logo.style.backgroundColor = "var(--pink)";
     items.style.color = "transparent";
@@ -49,6 +50,7 @@ function logoClick() {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
     items.style.transition = "all 1s ease";
+    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1000)";
     logo.style.backgroundColor = "var(--black)";
     items.style.color = "var(--black)";
