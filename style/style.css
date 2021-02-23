@@ -59,7 +59,7 @@
   }
 }
 
-/* -------- !!! -------- */
+/* -------- OVERALL STYLING -------- */
 main {
   overflow: hidden;
   overscroll-behavior: none;
@@ -112,8 +112,8 @@ button {
 
 /* -------- MENU -------- */
 .logo {
-  height: 16px;
   width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--pink);
   cursor: pointer;
@@ -125,8 +125,8 @@ button {
 }
 
 .menu {
-  height: 16px;
   width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--pink);
   position: fixed;
@@ -141,14 +141,12 @@ button {
   cursor: default;
   pointer-events: none;
   position: fixed;
-  top: 50%;
-  left: 20px;
-  transform: translate(20px, -50%);
   z-index: 2;
 }
 
 .item {
   font-size: 140px;
+  text-align: center;
   opacity: 1;
 }
 
@@ -362,6 +360,34 @@ button {
 }
 
 /* -------- MEDIA QUERIES -------- */
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+  .resume {
+    width: 0%;
+    grid-column: 1/4;
+  }
+  .items {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+  .resume {
+    height: 0vh;
+    grid-column: 2/3;
+  }
+  .items {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Max width of 1280px */
 @media (max-width: 1280px) {
   h1 {
     font-size: 100px;
@@ -369,12 +395,6 @@ button {
 
   p {
     font-size: 36px;
-  }
-
-  .items {
-    top: 40%;
-    left: 20px;
-    transform: translate(0px, -50%);
   }
 
   .item {
@@ -448,6 +468,7 @@ button {
   }
 }
 
+/* Max width of 767px */
 @media (max-width: 767px) {
   h1 {
     font-size: 60px;
@@ -463,10 +484,6 @@ button {
     height: 45px;
     font-size: 15px;
     align-self: center;
-  }
-
-  .items {
-    left: 10px;
   }
 
   .item {
@@ -536,6 +553,7 @@ button {
   }
 }
 
+/* Max width of 240px */
 @media (max-width: 240px) {
   h1 {
     font-size: 36px;
@@ -551,10 +569,6 @@ button {
     height: 30px;
     font-size: 10px;
     align-self: center;
-  }
-
-  .items {
-    left: 10px;
   }
 
   .item {
@@ -624,65 +638,8 @@ button {
   }
 }
 
+/* Max width of 960px in landscape mode */
 @media (max-width: 960px) and (orientation: landscape) {
-  h1 {
-    font-size: 60px;
-  }
-
-  .items {
-    top: 50%;
-    left: 20px;
-    transform: translate(20px, -50%);
-  }
-
-  .item {
-    font-size: 60px;
-  }
-
-  p {
-    font-size: 24px;
-  }
-
-  .intro {
-    font-size: 24px;
-  }
-
-  .profile-bw {
-    height: 270px;
-  }
-
-  .profile-color {
-    height: 270px;
-  }
-
-  .stars {
-    height: 20vh;
-  }
-
-  .boom {
-    height: 40vh;
-  }
-
-  .antic {
-    height: 40vh;
-  }
-
-  .shooting-star {
-    height: 40vh;
-  }
-
-  .games {
-    height: 40vh;
-  }
-
-  .handshake img {
-    height: 20vh;
-  }
-
-  .letter img {
-    height: 20vh;
-  }
-
   button {
     border: 3px solid var(--white);
     width: 97px;
@@ -692,29 +649,14 @@ button {
   }
 }
 
+/* Max width of 568px in landscape mode*/
 @media (max-width: 568px) and (orientation: landscape) {
-  h1 {
-    font-size: 36px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
   button {
     border: 2px solid var(--white);
     width: 85px;
     height: 30px;
     font-size: 10px;
     align-self: center;
-  }
-
-  .items {
-    left: 10px;
-  }
-
-  .item {
-    font-size: 36px;
   }
 
   .page-1 {
@@ -726,10 +668,6 @@ button {
     height: 20vh;
   }
 
-  .title {
-    display: none;
-  }
-
   .profile-bw {
     height: 180px;
     grid-column: 2/3;
@@ -742,12 +680,6 @@ button {
     grid-column: 2/3;
     grid-row: 2/3;
     justify-self: center;
-  }
-
-  .intro {
-    font-size: 14px;
-    grid-column: 2/3;
-    grid-row: 4/5;
   }
 
   .boom {
@@ -777,35 +709,5 @@ button {
   .social-links img {
     padding: 0px 5px;
     width: 24px;
-  }
-}
-
-@media screen and (orientation: portrait) {
-  .resume {
-    width: 0%;
-    grid-column: 1/4;
-  }
-  .item {
-    text-align: center;
-  }
-  .items {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-@media screen and (orientation: landscape) {
-  .resume {
-    height: 0vh;
-    grid-column: 2/3;
-  }
-  .item {
-    text-align: center;
-  }
-  .items {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
