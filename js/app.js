@@ -253,7 +253,7 @@ function pictureMove(e) {
 }
 
 container.addEventListener("mouseenter", pictureIn);
-container.addEventListener("touchstart", pictureOut);
+container.addEventListener("touchstart", pictureIn);
 container.addEventListener("mousemove", pictureMove);
 container.addEventListener("touchmove", pictureMove);
 container.addEventListener("mouseleave", pictureOut);
