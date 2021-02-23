@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* -------- COLORS -------- */
 :root {
   --white: #f4f4f4;
   --black: #1a1a1a;
@@ -12,6 +13,7 @@
   --green: #52ab7a;
 }
 
+/* -------- FONTS -------- */
 @font-face {
   font-family: Alegraya;
   src: url("../ressources/fonts/Alegreya/Alegreya-Regular.ttf");
@@ -36,7 +38,8 @@
   font-display: swap;
 }
 
-@keyframes fade {
+/* -------- ANIMATIONS -------- */
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -56,6 +59,7 @@
   }
 }
 
+/* -------- !!! -------- */
 main {
   overflow: hidden;
   overscroll-behavior: none;
@@ -102,14 +106,11 @@ button {
   transition: opacity 1.5s;
 }
 
-:focus {
-  outline: 0;
-}
-
 .highlight {
   color: var(--yellow);
 }
 
+/* -------- MENU -------- */
 .logo {
   height: 16px;
   width: 16px;
@@ -151,6 +152,7 @@ button {
   opacity: 1;
 }
 
+/* -------- PAGE-1 -------- */
 .page-1 {
   height: 200vh;
   background-color: var(--black);
@@ -164,7 +166,7 @@ button {
   grid-column: 1/2;
   grid-row: 2/3;
   justify-self: center;
-  animation: fade 1.5s ease-in-out infinite alternate;
+  animation: fade-in 1.5s ease-in-out infinite alternate;
 }
 
 .title {
@@ -174,13 +176,13 @@ button {
 }
 
 .title-1 {
-  animation: fade 2s ease-in-out;
+  animation: fade-in 2s ease-in-out;
 }
 
 .title-2 {
   font-family: Astloch;
   color: var(--pink);
-  animation: fade 2s ease-in-out;
+  animation: fade-in 2s ease-in-out;
 }
 
 .profile-bw {
@@ -191,7 +193,7 @@ button {
   transform-style: preserve-3d;
   opacity: 0;
   transition: opacity 0.25s;
-  animation: fade 1s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 
 .profile-color {
@@ -201,7 +203,7 @@ button {
   grid-row: 2/3;
   opacity: 0;
   transition: opacity 0.25s;
-  animation: fade 3s ease-in-out;
+  animation: fade-in 3s ease-in-out;
 }
 
 .intro {
@@ -217,9 +219,10 @@ button {
   border-radius: 30px;
   color: var(--black);
   background-color: var(--white);
-  animation: fade 1.5s ease-in-out infinite alternate;
+  animation: fade-in 1.5s ease-in-out infinite alternate;
 }
 
+/* -------- PAGE-2 -------- */
 .page-2 {
   height: 150vh;
   background-color: var(--white);
@@ -249,13 +252,14 @@ button {
   transition: opacity 1s;
 }
 
-.link {
+.school {
   border-radius: 30px;
   background-color: var(--black);
   color: var(--white);
   cursor: pointer;
 }
 
+/* -------- PAGE-3 -------- */
 .page-3 {
   height: 150vh;
   background-color: var(--green);
@@ -285,6 +289,7 @@ button {
   transition: opacity 1s;
 }
 
+/* -------- PAGE-4 -------- */
 .page-4 {
   height: 150vh;
   background-color: var(--black);
@@ -342,9 +347,8 @@ button {
   cursor: pointer;
 }
 
-.cv {
+.resume {
   cursor: pointer;
-  opacity: 0;
   transform: translate(-250%);
 }
 
@@ -353,14 +357,11 @@ button {
   transition: opacity 1.5s;
 }
 
-.hide {
-  opacity: 0;
-}
-
 .scroll-opacity {
   opacity: 1;
 }
 
+/* -------- MEDIA QUERIES -------- */
 @media (max-width: 1280px) {
   h1 {
     font-size: 100px;
@@ -780,7 +781,7 @@ button {
 }
 
 @media screen and (orientation: portrait) {
-  .cv {
+  .resume {
     width: 0%;
     grid-column: 1/4;
   }
@@ -795,7 +796,7 @@ button {
 }
 
 @media screen and (orientation: landscape) {
-  .cv {
+  .resume {
     height: 0vh;
     grid-column: 2/3;
   }

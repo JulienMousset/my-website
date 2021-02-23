@@ -1,5 +1,13 @@
 "use strict";
 
+/* -------- SCROLL -------- */
+const scroller = new LocomotiveScroll({
+  el: document.querySelector("[data-scroll-container]"),
+  smooth: true,
+});
+
+/* -------- MENU -------- */
+const screen = window.matchMedia("(max-width: 1280px)");
 const logo = document.querySelector(".logo");
 const menu = document.querySelector(".menu");
 const items = document.querySelector(".items");
@@ -7,661 +15,440 @@ const item1 = document.querySelector(".item-1");
 const item2 = document.querySelector(".item-2");
 const item3 = document.querySelector(".item-3");
 const item4 = document.querySelector(".item-4");
-const container = document.querySelector(".profile-bw");
-const card = document.querySelector(".profile-color");
 const page1 = document.querySelector(".page-1");
 const page2 = document.querySelector(".page-2");
-const link = document.querySelector(".link");
 const page3 = document.querySelector(".page-3");
 const page4 = document.querySelector(".page-4");
-const contact = document.querySelector(".contact");
-const email = document.querySelector(".e-mail");
-const button = document.querySelector("button");
-const cv = document.querySelector(".cv");
-const github = document.querySelector(".github");
-const bandcamp = document.querySelector(".bandcamp");
-const linkedin = document.querySelector(".linkedin");
-const mail = document.querySelector(".mail");
-const handshake = document.querySelector(".handshake");
-const letter = document.querySelector(".letter");
-const scroller = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-});
-const screen = window.matchMedia("(max-width: 1280px)");
 
-window.addEventListener("orientationchange", () => {
-  if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "0vh";
-  } else {
-    cv.style.width = "0%";
-    page4.style.height = "150vh";
-    contact.style.opacity = "1";
-    email.style.opacity = "1";
-    button.style.opacity = "1";
-    github.style.opacity = "1";
-    bandcamp.style.opacity = "1";
-    linkedin.style.opacity = "1";
-    mail.style.opacity = "1";
-    handshake.style.opacity = "1";
-    letter.style.opacity = "1";
-  }
-  cv.style.transform = "translate(-250%)";
-  cv.style.opacity = 0;
-  scroller.scrollTo("top");
-});
-
-logo.addEventListener("mouseenter", () => {
+/* Animation */
+function logoIn() {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-});
+}
 
-logo.addEventListener("mouseleave", () => {
+function logoOut() {
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(1)";
-});
+}
 
-logo.addEventListener("click", () => {
+function logoClick() {
   if (menu.classList.contains("open")) {
     logo.style.transition = "all 0.5s ease";
     menu.style.transition = "all 0.5s ease";
     items.style.transition = "all 0.5s ease";
-    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1)";
-    logo.style.backgroundColor = "#f7aea8";
+    logo.style.backgroundColor = "var(--pink)";
     items.style.color = "transparent";
     items.style.opacity = "0";
     items.style.cursor = "default";
     items.style.pointerEvents = "none";
-    menu.classList.remove("open");
     document.body.style.overflow = "auto";
+    menu.classList.remove("open");
     scroller.start();
   } else {
     logo.style.transition = "all 0.75s ease";
     menu.style.transition = "all 0.75s ease";
     items.style.transition = "all 1s ease";
-    logo.style.transform = "scale(1)";
     menu.style.transform = "scale(1000)";
-    logo.style.backgroundColor = "#1a1a1a";
-    items.style.color = "#1a1a1a";
+    logo.style.backgroundColor = "var(--black)";
+    items.style.color = "var(--black)";
     items.style.opacity = "1";
     items.style.cursor = "pointer";
     items.style.pointerEvents = "all";
-    menu.classList.add("open");
     document.body.style.overflow = "hidden";
+    menu.classList.add("open");
     scroller.stop();
   }
-});
+}
 
-item1.addEventListener("mouseenter", () => {
+logo.addEventListener("mouseenter", logoIn);
+logo.addEventListener("mouseleave", logoOut);
+logo.addEventListener("click", logoClick);
+
+/* Items */
+function itemClick() {
+  items.style.transition = "all 0.5s ease";
+  menu.style.transition = "all 0.5s ease";
+  menu.style.transform = "scale(1)";
+  items.style.color = "transparent";
+  items.style.opacity = "0";
+  items.style.cursor = "default";
+  items.style.pointerEvents = "none";
+  document.body.style.overflow = "auto";
+  menu.classList.remove("open");
+  scroller.start();
+}
+
+function logoColor() {
+  if (menu.classList.contains("open")) {
+    logo.style.backgroundColor = "var(--black)";
+  } else {
+    logo.style.backgroundColor = "var(--pink)";
+  }
+}
+
+/* Item1 */
+function item1In() {
   item1.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  logo.style.backgroundColor = "#f4f4f4";
-  item1.style.color = "#f4f4f4";
-});
+  logo.style.backgroundColor = "var(--white)";
+  item1.style.color = "var(--white)";
+}
 
+function item1Out() {
+  item1.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item1.style.color = "var(--black)";
+}
+
+function item1Click() {
+  itemClick();
+  scroller.scrollTo(page1);
+}
+
+item1.addEventListener("mouseenter", item1In);
 item1.addEventListener("mouseleave", () => {
-  item1.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item1.style.color = "#1a1a1a";
-  if (menu.classList.contains("open")) {
-    logo.style.backgroundColor = "#1a1a1a";
-  } else {
-    logo.style.backgroundColor = "#f7aea8";
-  }
+  item1Out();
+  logoColor();
 });
-
 item1.addEventListener("touchend", () => {
-  item1.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item1.style.color = "#1a1a1a";
-  logo.style.backgroundColor = "#f7aea8";
+  item1Out();
+  logo.style.backgroundColor = "var(--pink)";
 });
+item1.addEventListener("click", item1Click);
+item1.addEventListener("touchend", item1Click);
 
-item1.addEventListener("click", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  scroller.scrollTo(page1);
-});
-
-item1.addEventListener("touchend", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  scroller.scrollTo(page1);
-});
-
-item2.addEventListener("mouseenter", () => {
+/* Item2 */
+function item2In() {
   item2.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  logo.style.backgroundColor = "#f4f4f4";
-  item2.style.color = "#f4f4f4";
-});
+  logo.style.backgroundColor = "var(--white)";
+  item2.style.color = "var(--white)";
+}
 
+function item2Out() {
+  item2.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item2.style.color = "var(--black)";
+}
+
+function item2Click() {
+  itemClick();
+  if (screen.matches) {
+    scroller.scrollTo(page2);
+  } else {
+    scroller.scrollTo(page2, { offset: "200" });
+  }
+}
+
+item2.addEventListener("mouseenter", item2In);
 item2.addEventListener("mouseleave", () => {
-  item2.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item2.style.color = "#1a1a1a";
-  if (menu.classList.contains("open")) {
-    logo.style.backgroundColor = "#1a1a1a";
-  } else {
-    logo.style.backgroundColor = "#f7aea8";
-  }
+  item2Out();
+  logoColor();
 });
-
 item2.addEventListener("touchend", () => {
-  item2.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item2.style.color = "#1a1a1a";
-  logo.style.backgroundColor = "#f7aea8";
+  item2Out();
+  logo.style.backgroundColor = "var(--pink)";
 });
+item2.addEventListener("click", item2Click);
+item2.addEventListener("touchend", item2Click);
 
-item2.addEventListener("click", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page2);
-  } else {
-    scroller.scrollTo(page2, { offset: "200" });
-  }
-});
-
-item2.addEventListener("touchend", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page2);
-  } else {
-    scroller.scrollTo(page2, { offset: "200" });
-  }
-});
-
-item3.addEventListener("mouseenter", () => {
+/* Item3 */
+function item3In() {
   item3.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  logo.style.backgroundColor = "#f4f4f4";
-  item3.style.color = "#f4f4f4";
-});
+  logo.style.backgroundColor = "var(--white)";
+  item3.style.color = "var(--white)";
+}
 
+function item3Out() {
+  item3.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item3.style.color = "var(--black)";
+}
+
+function item3Click() {
+  itemClick();
+  if (screen.matches) {
+    scroller.scrollTo(page3);
+  } else {
+    scroller.scrollTo(page3, { offset: "200" });
+  }
+}
+
+item3.addEventListener("mouseenter", item3In);
 item3.addEventListener("mouseleave", () => {
-  item3.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item3.style.color = "#1a1a1a";
-  if (menu.classList.contains("open")) {
-    logo.style.backgroundColor = "#1a1a1a";
-  } else {
-    logo.style.backgroundColor = "#f7aea8";
-  }
+  item3Out();
+  logoColor();
 });
-
 item3.addEventListener("touchend", () => {
-  item3.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item3.style.color = "#1a1a1a";
-  logo.style.backgroundColor = "#f7aea8";
+  item3Out();
+  logo.style.backgroundColor = "var(--pink)";
 });
+item3.addEventListener("click", item3Click);
+item3.addEventListener("touchend", item3Click);
 
-item3.addEventListener("click", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page3);
-  } else {
-    scroller.scrollTo(page3, { offset: "200" });
-  }
-});
-
-item3.addEventListener("touchend", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page3);
-  } else {
-    scroller.scrollTo(page3, { offset: "200" });
-  }
-});
-
-item4.addEventListener("mouseenter", () => {
+/* Item4 */
+function item4In() {
   item4.style.transition = "all 0.25s ease";
   logo.style.transition = "all 0.25s ease";
   logo.style.transform = "scale(2)";
-  logo.style.backgroundColor = "#f4f4f4";
-  item4.style.color = "#f4f4f4";
-});
+  logo.style.backgroundColor = "var(--white)";
+  item4.style.color = "var(--white)";
+}
 
+function item4Out() {
+  item4.style.transition = "all 0.25s ease";
+  logo.style.transition = "all 0.25s ease";
+  logo.style.transform = "scale(1)";
+  item4.style.color = "var(--black)";
+}
+
+function item4Click() {
+  itemClick();
+  if (screen.matches) {
+    scroller.scrollTo(page4);
+  } else {
+    scroller.scrollTo(page4, { offset: "200" });
+  }
+}
+
+item4.addEventListener("mouseenter", item4In);
 item4.addEventListener("mouseleave", () => {
-  item4.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item4.style.color = "#1a1a1a";
-  if (menu.classList.contains("open")) {
-    logo.style.backgroundColor = "#1a1a1a";
-  } else {
-    logo.style.backgroundColor = "#f7aea8";
-  }
+  item4Out();
+  logoColor();
 });
-
 item4.addEventListener("touchend", () => {
-  item4.style.transition = "all 0.25s ease";
-  logo.style.transition = "all 0.25s ease";
-  logo.style.transform = "scale(1)";
-  item4.style.color = "#1a1a1a";
-  logo.style.backgroundColor = "#f7aea8";
+  item4Out();
+  logo.style.backgroundColor = "var(--pink)";
 });
+item4.addEventListener("click", item4Click);
+item4.addEventListener("touchend", item4Click);
 
-item4.addEventListener("click", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page4);
-  } else {
-    scroller.scrollTo(page4, { offset: "200" });
-  }
-});
+/* -------- PROFILE PICTURE -------- */
+const container = document.querySelector(".profile-bw");
+const card = document.querySelector(".profile-color");
 
-item4.addEventListener("touchend", () => {
-  items.style.transition = "all 0.5s ease";
-  menu.style.transition = "all 0.5s ease";
-  menu.style.transform = "scale(1)";
-  items.style.color = "transparent";
-  items.style.opacity = "0";
-  items.style.cursor = "default";
-  items.style.pointerEvents = "none";
-  menu.classList.remove("open");
-  document.body.style.overflow = "auto";
-  scroller.start();
-  if (screen.matches) {
-    scroller.scrollTo(page4);
-  } else {
-    scroller.scrollTo(page4, { offset: "200" });
-  }
-});
-
-container.addEventListener("mouseenter", () => {
+function pictureIn() {
   container.style.transition = "all 0.25s ease";
   container.style.opacity = "0";
-});
+}
 
-container.addEventListener("touchstart", () => {
-  container.style.transition = "all 0.25s ease";
-  container.style.opacity = "0";
-});
-
-container.addEventListener("mouseleave", () => {
+function pictureOut() {
   container.style.opacity = "1";
-});
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+}
 
-container.addEventListener("touchend", () => {
-  container.style.opacity = "1";
-});
-
-container.addEventListener("mousemove", (e) => {
+function pictureMove(e) {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
   let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
   card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-});
+}
 
+container.addEventListener("mouseenter", pictureIn);
+container.addEventListener("touchstart", pictureOut);
+container.addEventListener("mousemove", pictureMove);
 container.addEventListener("touchmove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 1;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 1;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  pictureMove(e);
   e.preventDefault();
 });
+container.addEventListener("mouseleave", pictureOut);
+container.addEventListener("touchend", pictureOut);
 
-container.addEventListener("mouseleave", () => {
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-});
+/* -------- LINKS -------- */
+const school = document.querySelector(".school");
+const email = document.querySelector(".e-mail");
 
-container.addEventListener("touchend", () => {
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-});
+/* School */
+function schoolIn() {
+  school.style.transition = "all 0.25s ease";
+  school.style.backgroundColor = "var(--white)";
+  school.style.color = "var(--black)";
+}
 
-link.addEventListener("mouseenter", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#f4f4f4";
-  link.style.color = "#1a1a1a";
-});
+function schoolOut() {
+  school.style.transition = "all 0.25s ease";
+  school.style.backgroundColor = "var(--black)";
+  school.style.color = "var(--white)";
+}
 
-link.addEventListener("mouseleave", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#1a1a1a";
-  link.style.color = "#f4f4f4";
-});
+school.addEventListener("mouseenter", schoolIn);
+school.addEventListener("mouseleave", schoolOut);
+school.addEventListener("click", schoolOut);
 
-link.addEventListener("click", () => {
-  link.style.transition = "all 0.25s ease";
-  link.style.backgroundColor = "#1a1a1a";
-  link.style.color = "#f4f4f4";
-});
-
-email.addEventListener("mouseenter", () => {
+/* E-mail */
+function emailIn() {
   email.style.transition = "all 0.25s ease";
-  email.style.backgroundColor = "#f4f4f4";
-  email.style.color = "#1a1a1a";
-});
+  email.style.backgroundColor = "var(--white)";
+  email.style.color = "var(--black)";
+}
 
-email.addEventListener("mouseleave", () => {
+function emailOut() {
   email.style.transition = "all 0.25s ease";
-  email.style.backgroundColor = "#1a1a1a";
-  email.style.color = "#f4f4f4";
-});
+  email.style.backgroundColor = "var(--black)";
+  email.style.color = "var(--white)";
+}
 
-email.addEventListener("click", () => {
-  email.style.transition = "all 0.25s ease";
-  email.style.backgroundColor = "#1a1a1a";
-  email.style.color = "#f4f4f4";
-});
+email.addEventListener("mouseenter", emailIn);
+email.addEventListener("mouseleave", emailOut);
+email.addEventListener("click", emailOut);
 
-button.addEventListener("mouseenter", () => {
+/* -------- RESUME -------- */
+const button = document.querySelector("button");
+const resume = document.querySelector(".resume");
+const contact = document.querySelector(".contact");
+const handshake = document.querySelector(".handshake");
+const letter = document.querySelector(".letter");
+
+/* Button */
+function buttonIn() {
   button.style.transition = "all 0.25s ease";
-  button.style.border = "5px solid #1a1a1a";
-  button.style.backgroundColor = "#f4f4f4";
-  button.style.color = "#1a1a1a";
-});
+  button.style.border = "5px solid var(--black)";
+  button.style.backgroundColor = "var(--white)";
+  button.style.color = "var(--black)";
+}
 
-button.addEventListener("touchstart", () => {
+function buttonOut() {
   button.style.transition = "all 0.25s ease";
-  button.style.border = "5px solid #1a1a1a";
-  button.style.backgroundColor = "#f4f4f4";
-  button.style.color = "#1a1a1a";
-});
+  button.style.border = "5px solid var(--white)";
+  button.style.backgroundColor = "var(--black)";
+  button.style.color = "var(--white)";
+}
 
-button.addEventListener("mouseleave", () => {
-  button.style.transition = "all 0.25s ease";
-  button.style.border = "5px solid #f4f4f4";
-  button.style.backgroundColor = "#1a1a1a";
-  button.style.color = "#f4f4f4";
-});
-
-button.addEventListener("click", () => {
-  button.style.transition = "all 0.25s ease";
-  button.style.border = "5px solid #f4f4f4";
-  button.style.backgroundColor = "#1a1a1a";
-  button.style.color = "#f4f4f4";
-});
-
-button.addEventListener("click", () => {
-  cv.style.transition = "all 0.75s ease";
+function buttonClick() {
+  resume.style.transition = "all 0.75s ease";
   if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "150vh";
-    cv.style.width = null;
+    resume.style.height = "150vh";
+    resume.style.width = null;
   } else {
-    cv.style.width = "100%";
-    cv.style.height = null;
+    resume.style.width = "100%";
+    resume.style.height = null;
     page4.style.height = "100vh";
-    contact.style.transition = "all 0.5s ease";
-    email.style.transition = "all 0.5s ease";
-    button.style.transition = "all 0.5s ease";
-    github.style.transition = "all 0.5s ease";
-    bandcamp.style.transition = "all 0.5s ease";
-    linkedin.style.transition = "all 0.5s ease";
-    mail.style.transition = "all 0.5s ease";
-    handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
-    contact.style.opacity = "0";
-    email.style.opacity = "0";
-    button.style.opacity = "0";
-    github.style.opacity = "0";
-    bandcamp.style.opacity = "0";
-    linkedin.style.opacity = "0";
-    mail.style.opacity = "0";
-    handshake.style.opacity = "0";
-    letter.style.opacity = "0";
   }
-  cv.style.transform = "translate(0%)";
-  cv.style.opacity = 1;
+  resume.style.transform = "translate(0%)";
+  contact.style.opacity = "0";
+  email.style.opacity = "0";
+  button.style.opacity = "0";
+  github.style.opacity = "0";
+  bandcamp.style.opacity = "0";
+  linkedin.style.opacity = "0";
+  mail.style.opacity = "0";
+  handshake.style.opacity = "0";
+  letter.style.opacity = "0";
   scroller.scrollTo(page4);
-});
+}
 
-button.addEventListener("touchcancel", () => {
-  cv.style.transition = "all 0.75s ease";
-  if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "150vh";
-    cv.style.width = null;
-  } else {
-    cv.style.width = "100%";
-    cv.style.height = null;
-    page4.style.height = "100vh";
-    contact.style.transition = "all 0.5s ease";
-    email.style.transition = "all 0.5s ease";
-    button.style.transition = "all 0.5s ease";
-    github.style.transition = "all 0.5s ease";
-    bandcamp.style.transition = "all 0.5s ease";
-    linkedin.style.transition = "all 0.5s ease";
-    mail.style.transition = "all 0.5s ease";
-    handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
-    contact.style.opacity = "0";
-    email.style.opacity = "0";
-    button.style.opacity = "0";
-    github.style.opacity = "0";
-    bandcamp.style.opacity = "0";
-    linkedin.style.opacity = "0";
-    mail.style.opacity = "0";
-    handshake.style.opacity = "0";
-    letter.style.opacity = "0";
-  }
-  cv.style.transform = "translate(0%)";
-  cv.style.opacity = 1;
-  scroller.scrollTo(page4);
-});
+button.addEventListener("mouseenter", buttonIn);
+button.addEventListener("touchstart", buttonIn);
+button.addEventListener("mouseleave", buttonOut);
+button.addEventListener("click", buttonOut);
+button.addEventListener("click", buttonClick);
+button.addEventListener("touchcancel", buttonClick);
 
-cv.addEventListener("mouseleave", () => {
-  cv.style.transition = "all 0.75s ease";
+/* Resume */
+function resumeOut() {
+  resume.style.transition = "all 0.75s ease";
   if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "0vh";
+    resume.style.height = "0vh";
   } else {
-    cv.style.width = "0%";
+    resume.style.width = "0%";
     page4.style.height = "150vh";
-    contact.style.transition = "all 0.5s ease";
-    email.style.transition = "all 0.5s ease";
-    button.style.transition = "all 0.5s ease";
-    github.style.transition = "all 0.5s ease";
-    bandcamp.style.transition = "all 0.5s ease";
-    linkedin.style.transition = "all 0.5s ease";
-    mail.style.transition = "all 0.5s ease";
-    handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
-    contact.style.opacity = "1";
-    email.style.opacity = "1";
-    button.style.opacity = "1";
-    github.style.opacity = "1";
-    bandcamp.style.opacity = "1";
-    linkedin.style.opacity = "1";
-    mail.style.opacity = "1";
-    handshake.style.opacity = "1";
-    letter.style.opacity = "1";
   }
-  cv.style.transform = "translate(-250%)";
-  cv.style.opacity = 0;
-});
+  resume.style.transform = "translate(-250%)";
+  contact.style.opacity = "1";
+  email.style.opacity = "1";
+  button.style.opacity = "1";
+  github.style.opacity = "1";
+  bandcamp.style.opacity = "1";
+  linkedin.style.opacity = "1";
+  mail.style.opacity = "1";
+  handshake.style.opacity = "1";
+  letter.style.opacity = "1";
+}
 
-cv.addEventListener("click", () => {
-  cv.style.transition = "all 0.75s ease";
-  if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "0vh";
-  } else {
-    cv.style.width = "0%";
-    page4.style.height = "150vh";
-    contact.style.transition = "all 0.5s ease";
-    email.style.transition = "all 0.5s ease";
-    button.style.transition = "all 0.5s ease";
-    github.style.transition = "all 0.5s ease";
-    bandcamp.style.transition = "all 0.5s ease";
-    linkedin.style.transition = "all 0.5s ease";
-    mail.style.transition = "all 0.5s ease";
-    handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
-    contact.style.opacity = "1";
-    email.style.opacity = "1";
-    button.style.opacity = "1";
-    github.style.opacity = "1";
-    bandcamp.style.opacity = "1";
-    linkedin.style.opacity = "1";
-    mail.style.opacity = "1";
-    handshake.style.opacity = "1";
-    letter.style.opacity = "1";
-  }
-  cv.style.transform = "translate(-250%)";
-  cv.style.opacity = 0;
+function resumeClick() {
+  resumeOut();
   scroller.scrollTo("bottom");
-});
+}
 
-cv.addEventListener("touchcancel", () => {
-  cv.style.transition = "all 0.75s ease";
-  if (window.innerWidth > window.innerHeight) {
-    cv.style.height = "0vh";
-  } else {
-    cv.style.width = "0%";
-    page4.style.height = "150vh";
-    contact.style.transition = "all 0.5s ease";
-    email.style.transition = "all 0.5s ease";
-    button.style.transition = "all 0.5s ease";
-    github.style.transition = "all 0.5s ease";
-    bandcamp.style.transition = "all 0.5s ease";
-    linkedin.style.transition = "all 0.5s ease";
-    mail.style.transition = "all 0.5s ease";
-    handshake.style.transition = "all 0.5s ease";
-    letter.style.transition = "all 0.5s ease";
-    contact.style.opacity = "1";
-    email.style.opacity = "1";
-    button.style.opacity = "1";
-    github.style.opacity = "1";
-    bandcamp.style.opacity = "1";
-    linkedin.style.opacity = "1";
-    mail.style.opacity = "1";
-    handshake.style.opacity = "1";
-    letter.style.opacity = "1";
-  }
-  cv.style.width = "0%";
-  cv.style.transform = "translate(-250%)";
-  cv.style.opacity = 0;
-  scroller.scrollTo("bottom");
-});
+resume.addEventListener("mouseleave", resumeOut);
+resume.addEventListener("click", resumeClick);
+resume.addEventListener("touchcancel", resumeClick);
 
-github.addEventListener("mouseenter", () => {
+/* -------- SOCIALS -------- */
+const mail = document.querySelector(".mail");
+const github = document.querySelector(".github");
+const bandcamp = document.querySelector(".bandcamp");
+const linkedin = document.querySelector(".linkedin");
+
+/* Github */
+function githubIn() {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(2)";
-});
+}
 
-github.addEventListener("mouseleave", () => {
+function githubOut() {
   github.style.transition = "all 0.25s ease";
   github.style.transform = "scale(1)";
-});
+}
 
-github.addEventListener("click", () => {
-  github.style.transition = "all 0.25s ease";
-  github.style.transform = "scale(1)";
-});
+github.addEventListener("mouseenter", githubIn);
+github.addEventListener("mouseleave", githubOut);
+github.addEventListener("click", githubOut);
 
-bandcamp.addEventListener("mouseenter", () => {
+/* Bandcamp */
+function bandcampIn() {
   bandcamp.style.transition = "all 0.25s ease";
   bandcamp.style.transform = "scale(2)";
-});
+}
 
-bandcamp.addEventListener("mouseleave", () => {
+function bandcampOut() {
   bandcamp.style.transition = "all 0.25s ease";
   bandcamp.style.transform = "scale(1)";
-});
+}
 
-bandcamp.addEventListener("click", () => {
-  bandcamp.style.transition = "all 0.25s ease";
-  bandcamp.style.transform = "scale(1)";
-});
+bandcamp.addEventListener("mouseenter", bandcampIn);
+bandcamp.addEventListener("mouseleave", bandcampOut);
+bandcamp.addEventListener("click", bandcampOut);
 
-linkedin.addEventListener("mouseenter", () => {
+/* Linkedin */
+function linkedinIn() {
   linkedin.style.transition = "all 0.25s ease";
   linkedin.style.transform = "scale(2)";
-});
+}
 
-linkedin.addEventListener("mouseleave", () => {
+function linkedinOut() {
   linkedin.style.transition = "all 0.25s ease";
   linkedin.style.transform = "scale(1)";
-});
+}
 
-linkedin.addEventListener("click", () => {
-  linkedin.style.transition = "all 0.25s ease";
-  linkedin.style.transform = "scale(1)";
-});
+linkedin.addEventListener("mouseenter", linkedinIn);
+linkedin.addEventListener("mouseleave", linkedinOut);
+linkedin.addEventListener("click", linkedinOut);
 
-mail.addEventListener("mouseenter", () => {
+/* Mail */
+function mailIn() {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(2)";
-});
+}
 
-mail.addEventListener("mouseleave", () => {
+function mailOut() {
   mail.style.transition = "all 0.25s ease";
   mail.style.transform = "scale(1)";
-});
+}
 
-mail.addEventListener("click", () => {
-  mail.style.transition = "all 0.25s ease";
-  mail.style.transform = "scale(1)";
-});
+mail.addEventListener("mouseenter", mailIn);
+mail.addEventListener("mouseleave", mailOut);
+mail.addEventListener("click", mailOut);
 
-/*mail.addEventListener("click", someFunction);
-mail.addEventListener("mouseleave", someFunction);*/
+/* -------- ORIENTATION CHANGE -------- */
+window.addEventListener("orientationchange", () => {
+  resumeOut();
+  scroller.scrollTo("top");
+});
